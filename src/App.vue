@@ -8,6 +8,7 @@
 export default {
 //efeefe
 // zdarec
+//pokus2 ci to vieme
 }
 </script>
 
