@@ -1,5 +1,5 @@
 <template>
-<div class=zadatLokaciu>
+<div class="zadatLokaciu">
   <h2>Zadat lokaciu</h2>
   </div>
 </template>

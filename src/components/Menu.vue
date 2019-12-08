@@ -7,6 +7,9 @@
           <li class="mapa">
             <router-link to="/mapa">Mapa vyskytu kliestov</router-link>
           </li>
+          <li class="lokacia">
+            <router-link to="/lokacia">Pridat kliste</router-link>
+          </li>
           <li class="informacie">
             <router-link to="/informacie">Prevencia</router-link>
           </li>

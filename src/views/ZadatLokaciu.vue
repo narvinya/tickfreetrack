@@ -1,6 +1,7 @@
 <template>
    <body>
     <div class="PozadieLes">
+      <Menu />
       <Ikona />
       <Nadpis />
       <MapaObrazok />
