@@ -5,7 +5,7 @@
             <router-link to="/">Domov</router-link>
           </li>
           <li class="mapa">
-            <router-link to="/lokacia">Mapa vyskytu kliestov</router-link>
+            <router-link to="/mapa">Mapa vyskytu kliestov</router-link>
           </li>
           <li class="informacie">
             <router-link to="/informacie">Prevencia</router-link>

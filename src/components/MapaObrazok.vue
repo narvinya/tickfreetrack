@@ -1,5 +1,5 @@
 <template>
-  <img class="provizornaMapa" src="../../public/images/IlustracnaMapa.png" />
+  
 </template>
 
 <script>
