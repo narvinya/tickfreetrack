@@ -1,16 +1,18 @@
 <template>
-  <div class="pozadiMapa">
+  <div class="PozadieLes">
    
     <div >
      
       <Ikona />
       <Nadpis />
       <Menu />
+      <buttonPridat/>
     </div>
  
-    <div>
+    <div class="ramecekMapa">
       <l-map :zoom="zoom" :center="center" class="mapa">
         <l-tile-layer :url="url" :attribution="attribution" />
+        
         <l-marker v-for="(kliste, index) in klistata" v-bind:key="index " :lat-lng="withIcon">
           <l-popup class="popisekKlistete">
             <div >
@@ -44,6 +46,7 @@ import Ikona from "@/components/Ikona.vue";
 import MapaObrazok from "@/components/MapaObrazok.vue";
 import Menu from "@/components/Menu.vue";
 import Nadpis from "@/components/Nadpis.vue";
+import ButtonPridat from '@/components/ButtonPridat.vue';
 
 import { latLng } from "leaflet";
 import {
@@ -66,7 +69,8 @@ export default {
     LMarker,
     LPopup,
     LTooltip,
-    LIcon
+    LIcon,
+    'buttonPridat' : ButtonPridat
   },
   data() {
     return {
@@ -99,7 +103,7 @@ export default {
 };
 </script>
 
-<style scoped>
+<style >
 .pozadiMapa {
   background-image: url(../../public/images/Pozadie.png),
     linear-gradient(90deg, rgba(63, 179, 157, 1) 0%, rgba(79, 195, 147, 1) 37%);
@@ -108,14 +112,19 @@ export default {
   background-position: center;
   position: relative;
 }
+.ramecekMapa{
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
 .mapa {
   position: absolute;
-  top: 175px;
+  top: 120px;
   height: 400px;
   width: 95%;
-  margin: 30px;
-  border: 10px solid rgb(8, 68, 52);
-  border-radius: 8px;
+  margin: 20px;
+  border: 10px solid rgba(63, 179, 157, 1);
+  border-radius: 10px;
   box-shadow: 10px 0 10px rgba(0, 0, 0, 0.2);
 }
 .popisekKlistete{

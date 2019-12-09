@@ -1,5 +1,5 @@
 <template>
-   <router-link to="/" class="buttonPreskocit">Preskocit</router-link>
+   <router-link to="/lokacia" class="buttonPreskocit">Preskocit</router-link>
 </template>
 
 <script>
