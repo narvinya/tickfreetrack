@@ -1,5 +1,5 @@
 <template>
-  <router-link to="/noveKliste" class="pridatButton">Pridat novy vyskyt klistete</router-link>
+  <router-link to="/mapa" class="pridatButton">Ulozit</router-link>
 </template>
 
 <script>
@@ -8,11 +8,11 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .pridatButton {
     position:absolute;
-    bottom:30px;
-    right:650px;
+    bottom: 30px;
+   
     display: inline-block;
     text-align: center;
     padding: 12px 80px 12px 80px;
