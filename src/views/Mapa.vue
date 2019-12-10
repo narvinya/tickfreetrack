@@ -43,7 +43,7 @@
 
 <script>
 import Ikona from "@/components/Ikona.vue";
-import MapaObrazok from "@/components/MapaObrazok.vue";
+//import MapaObrazok from "@/components/MapaObrazok.vue";
 import Menu from "@/components/Menu.vue";
 import Nadpis from "@/components/Nadpis.vue";
 import ButtonPridat from '@/components/ButtonPridat.vue';
@@ -62,7 +62,7 @@ export default {
   components: {
     Ikona: Ikona,
     Nadpis: Nadpis,
-    MapaObrazok: MapaObrazok,
+    //MapaObrazok: MapaObrazok,
     Menu: Menu,
     LMap,
     LTileLayer,
@@ -103,7 +103,7 @@ export default {
 };
 </script>
 
-<style >
+<style scoped>
 .pozadiMapa {
   background-image: url(../../public/images/Pozadie.png),
     linear-gradient(90deg, rgba(63, 179, 157, 1) 0%, rgba(79, 195, 147, 1) 37%);
@@ -120,9 +120,10 @@ export default {
 .mapa {
   position: absolute;
   top: 120px;
-  height: 400px;
+  height: 460px;
   width: 95%;
   margin: 20px;
+  padding: 10px;
   border: 10px solid rgba(63, 179, 157, 1);
   border-radius: 10px;
   box-shadow: 10px 0 10px rgba(0, 0, 0, 0.2);
