@@ -3,7 +3,7 @@
    <menicko/>
     <div id="obalka">
         <div >
-            <mapa class="mapa"/>
+            <mapa />
         </div>
 
         <div class="formular">
@@ -12,6 +12,7 @@
             <ulozit/>
         </div>
     </div>
+    
   </div>
 </template>
 
@@ -27,7 +28,30 @@ if ("geolocation" in navigator) {
 } else {
   console.log('geolocation IS NOT available')
 }
+function geoFindMe() {
 
+
+  function success(position) {
+    const latitude  = position.coords.latitude;
+    const longitude = position.coords.longitude;
+
+    status.textContent = '';
+    mapLink.href = `https://www.openstreetmap.org/#map=18/${latitude}/${longitude}`;
+    mapLink.textContent = `Latitude: ${latitude} °, Longitude: ${longitude} °`;
+  }
+
+  function error() {
+    status.textContent = 'Unable to retrieve your location';
+  }
+
+  if (!navigator.geolocation) {
+    status.textContent = 'Geolocation is not supported by your browser';
+  } else {
+    status.textContent = 'Locating…';
+    navigator.geolocation.getCurrentPosition(success, error);
+  }
+
+}
 
 
 export default {
@@ -61,8 +85,7 @@ export default {
 
 <style scoped>
 .formular {
-    background-image: 
-      linear-gradient(#F8CE82 , #F4AF6A);
+    background-image: linear-gradient(#F8CE82 , #F4AF6A);
     background-size: cover;
     background-position: center;
     margin: 40px 20px 30px 30px;
@@ -73,13 +96,16 @@ export default {
     font-size: 25px;
     text-align:center;
     color: rgb(24, 54, 54);
+max-width: 45%;
 }
 #obalka{
     display: flex;
     justify-content: space-between;
-    margin-top: 120px;
+    padding-top: 120px;
+
 }
-.mapa{
-    margin-top: 0px;
+.ramecekMapa{
+    position: absolute;
+    left: 20px;
 }
 </style>

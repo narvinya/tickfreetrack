@@ -1,7 +1,7 @@
 <template>
   <div>
     <h2>Zadat novy vyskyt klistete</h2>
-    <div class="formular">
+    <div class="formular1">
       <label class="popisek">
         Kdo kliste prenasel:
         <input type="text" v-model="prenasec" class="policko" />
@@ -12,8 +12,12 @@
         <textarea
           class="policko"
           v-model="message"
+          maxlength="880"  cols="45" rows="6" wrap="hard"
           placeholder="vlozte poznamku, pokud by mohla byt uzitecna pro dalsi uzivatele. dekujeme"
         ></textarea>
+
+        
+
       </label>
       
       <label class="popisek">Datum nalezu:
@@ -44,7 +48,6 @@ export default {
 <style scoped>
 .policko {
   padding: 10px 20px;
-  min-width: 200px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
   border-radius: 10px;
   font-family: "Arvo", serif;
@@ -57,10 +60,10 @@ export default {
   font-size: 18px;
   color: rgb(24, 54, 54);
 }
-.formular {
-  display: grid;
-  min-width: 460px;
-  grid-gap: 10px;
+.formular1 {
+  display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
+  max-width: 50%;
 }
 </style>
