@@ -5,7 +5,6 @@
       <Nadpis />
       <Menu />
       <UvodnyText />
-      <HomeButtonSeen />
       <HomeButtonBitten />
     </div>
 </body>
@@ -18,7 +17,6 @@ import Nadpis from "@/components/Nadpis.vue";
 import PozadieLes from "@/components/PozadieLes.vue";
 import PozadieZelene from "@/components/PozadieZelene.vue";
 import UvodnyText from "@/components/UvodnyText.vue";
-import HomeButtonSeen from "@/components/HomeButtonSeen.vue";
 import HomeButtonBitten from "@/components/HomeButtonBitten.vue";
 export default {
   components: {
@@ -28,7 +26,6 @@ export default {
     PozadieLes: PozadieLes,
     PozadieZelene: PozadieZelene,
     UvodnyText: UvodnyText,
-    HomeButtonSeen: HomeButtonSeen,
     HomeButtonBitten: HomeButtonBitten,
 
   }

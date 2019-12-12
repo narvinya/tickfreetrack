@@ -1,5 +1,5 @@
 <template>
-  <body>
+   <body>
     <div class="PozadieBiele">
       <Ikona />
       <Nadpis />

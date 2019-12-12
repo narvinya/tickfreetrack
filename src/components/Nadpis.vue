@@ -14,7 +14,6 @@ export default {
   font-size: 25px;
   text-align:center;
   padding:25px;
-  
 }
 
 @media (min-width: 600px) {
@@ -23,7 +22,6 @@ export default {
     top: 25px;
     right: 125px;
     font-size: 40px;
-    position: absolute;
     padding-top:0;
   
 }

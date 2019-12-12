@@ -15,7 +15,7 @@ export default {};
   position: absolute;
   font-family: "Arvo", serif;
   font-size: 15px;
-  top: 175px;
+  top: 110px;
   margin-left: 15px;
   margin-right: 15px;
 }
@@ -26,16 +26,19 @@ export default {};
     max-width: 250px;
     right: 30px;
     bottom: 125px;
-    font-size: 18px;
+    top:175px;
+    font-size: 16px;
     margin-right: 0;
     margin-left: 0;
     position: absolute;
+    padding-top: 30px;
   }
 }
 
 @media (min-width: 1000px) {
   .uvodnyText {
     right: 50px;
+    font-size: 18px;
   }
 }
 </style>

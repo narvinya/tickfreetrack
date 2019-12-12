@@ -6,7 +6,13 @@ import Mapa from '../views/Mapa.vue';
 import OdstranenieKliesta from '../views/OdstranenieKliesta.vue';
 import ZadatLokaciu from '../views/ZadatLokaciu.vue';
 import Odfotit from '../views/Odfotit.vue';
-import NoveKliste from '../views/NoveKliste.vue'
+import NoveKliste from '../views/NoveKliste.vue';
+import Prevencia from '../views/Prevencia.vue';
+import PriznakyPriNakaze from '../views/PriznakyPriNakaze.vue';
+import PrvaPomoc from '../views/PrvaPomoc.vue';
+import MoznostiTestovania from '../views/MoznostiTestovania.vue';
+import Rizika from '../views/Rizika.vue';
+
 
 Vue.use(VueRouter)
 
@@ -14,7 +20,7 @@ const routes = [
   {
     path: '/',
     name: 'home',
-    component: Home
+    component: Home,
   }, {
     path: '/informacie',
     name: 'informacie',
@@ -40,7 +46,33 @@ const routes = [
     path: '/novekliste',
     name: 'znovekliste',
     component: NoveKliste
-  }
+  },
+  {
+    path: '/prevencia',
+    name: 'prevencia',
+    component: Prevencia
+  },
+  {
+    path: '/priznaky',
+    name: 'priznaky',
+    component: PriznakyPriNakaze
+  },
+  {
+    path: '/pomoc',
+    name: 'prvaPomoc',
+    component: PrvaPomoc
+  },
+  {
+    path: '/testovanie',
+    name: 'moznostiTestovania',
+    component: MoznostiTestovania
+  },
+  {
+    path: '/rizika',
+    name: 'rizika',
+    component: Rizika
+  },
+  
 
 ]
 
