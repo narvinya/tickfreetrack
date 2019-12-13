@@ -30,7 +30,7 @@
         (najviac jednu otáčku) striedavo na obe strany. Ak napriek tomu stále drží, musíme ťah proti koži zväčšovať. Napokon sa uvoľní a podarí sa vybrať ho z rany celého.
         Po odstránení očistite oblasť antiseptickým prostriedkom, ako je napríklad alkohol alebo mydlo a voda.
       </p>
-      <buttonDalej />
+      <buttonDalej>Ďalej</buttonDalej>
     </div>
   </div>
   </div>

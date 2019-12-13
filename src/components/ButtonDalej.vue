@@ -1,5 +1,7 @@
 <template>
-  <router-link to="/lokacia" class="buttonDalej">Ďalej</router-link>
+<div class=Button>
+  <router-link to="/lokacia">Ďalej</router-link>
+  <div>
 </template>
 
 <script>
