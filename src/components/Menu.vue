@@ -82,21 +82,22 @@ export default {};
     font-family: 'Roboto Slab', serif;
     font-size: 15px;
     position: absolute;
-    top: 50px;
+    top: 60px;
     width: 100%;
+    background-color: rgba(63, 179, 157, 1);
   }
-  /* NASTAVIT PRVEMU ITEMU HOME MENEJ PERCENT AKO 25 */
+
+.domovMobil {
+  max-width:30px;
+}
+
   .cssmenu li {
     width: 25%;
+    white-space: nowrap;
   }
 
   .dropdown-content li {
     width: auto;
-  }
-
-  .cssmenu ul li {
-    margin: 0;
-    background-color: rgba(63, 179, 157, 1);
   }
 
   .cssmenu ul li a {

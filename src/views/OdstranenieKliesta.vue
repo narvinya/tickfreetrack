@@ -21,7 +21,7 @@
         Vytáčaním kliešťa sa jeho fixačný orgán - tenký a relatívne dlhý, roztrhne a ostane v koži.
       </p>
     </div>
-    <img class="odstranenieNavod" src="../../public/images/OdstranenieNavod.jpg" />
+    <img class="odstranenieNavod" src="../../public/images/OdstranenieNavod.png" />
     <ZelenaZnacka />
     <div class="textOdstranenie">
       <p>

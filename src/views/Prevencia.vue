@@ -84,7 +84,6 @@
         For use on: For use on skin, lawns, and gardens
         Commercially available: No
       </p>
-       <buttonDalej />
     </div>
     </div>
   </div>
