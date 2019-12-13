@@ -16,6 +16,12 @@
             <i class="fa fa-fw fa-home"></i>
           </router-link>
         </li>
+
+            <li class="mapaWeb">
+          <router-link to="/mapa">
+            <i class="fa fa-fw fa-map"></i> Mapa výskytu
+          </router-link>
+        </li>
         <li class="informacie">
           <router-link to="/informacie">
             <i class="fa fa-fw fa-info"></i> Info
@@ -26,27 +32,23 @@
               <router-link to="/prevencia">Prevencia</router-link>
             </li>
             <li>
-              <router-link to="/odstranenie">Ako spravne odstranit kliesta</router-link>
+              <router-link to="/odstranenie">Ako správne odstrániť kliešťa</router-link>
             </li>
             <li>
               <router-link to="/testovanie">Možnosti testovania kliešťa</router-link>
             </li>
             <li>
-              <router-link to="/rizika">Rizika</router-link>
+              <router-link to="/rizika">Riziká</router-link>
             </li>
             <li>
               <router-link to="/priznaky">Príznaky pri nákaze</router-link>
             </li>
             <li>
-              <router-link to="/pomoc">Prva pomoc</router-link>
+              <router-link to="/pomoc">Prvá pomoc</router-link>
             </li>
           </ul>
         </li>
-        <li class="mapaWeb">
-          <router-link to="/mapa">
-            <i class="fa fa-fw fa-map"></i> Mapa vyskytu
-          </router-link>
-        </li>
+  
         <li class="mapaMobil">
           <router-link to="/mapa">
             <i class="fa fa-fw fa-map"></i> Mapa
@@ -54,7 +56,7 @@
         </li>
         <li class="lokacia">
           <router-link to="/lokacia">
-            <i class="fa fa-fw fa-crosshairs"></i> Pridat kliste
+            <i class="fa fa-fw fa-crosshairs"></i> Pridať kliešťa
           </router-link>
         </li>
       </ul>
@@ -77,7 +79,7 @@ export default {};
   }
 
   .cssmenu {
-    font-family: "Arvo", serif;
+    font-family: 'Roboto Slab', serif;
     font-size: 15px;
     position: absolute;
     top: 50px;
@@ -158,7 +160,7 @@ export default {};
 
   .cssmenu-content {
     position: absolute;
-    right: 25px;
+    left: 25px;
     top: 110px;
   }
 

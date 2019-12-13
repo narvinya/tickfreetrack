@@ -22,9 +22,9 @@ export default {};
 
 @media (min-width: 600px) {
   .uvodnyText {
-    text-align: right;
+    text-align: left;
     max-width: 250px;
-    right: 30px;
+    left: 30px;
     bottom: 125px;
     top:175px;
     font-size: 16px;
@@ -37,7 +37,7 @@ export default {};
 
 @media (min-width: 1000px) {
   .uvodnyText {
-    right: 50px;
+    left: 50px;
     font-size: 18px;
   }
 }

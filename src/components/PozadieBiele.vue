@@ -27,8 +27,19 @@ export default {
   .PozadieBiele {
     max-width: 1200px;
     margin-top: 100px;
+    padding: 50px 25px 50px 25px;
+  }
+
+
+}
+
+@media (min-width: 1000px) {
+  .PozadieBiele {
     padding: 50px;
   }
+
+  
 }
+
 
 </style>

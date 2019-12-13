@@ -41,7 +41,7 @@ export default {};
   .bittenButton {
     position: absolute;
     bottom: 150px;
-    right: 30px;
+    left: 30px;
     text-align: center;
     padding: 12px 30px 12px 30px;
     font: 17px "Arvo", serif;

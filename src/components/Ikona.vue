@@ -23,7 +23,7 @@ export default {
   .ikona {
     max-width: 60px;
     top: 45px;
-    right: 60px;
+    left: 60px;
     padding-top:0;
     position:absolute;
   }

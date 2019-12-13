@@ -33,5 +33,5 @@ export default {
 </script>
 
 <style>
-@import url("https://fonts.googleapis.com/css?family=Arvo&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap");
 </style>

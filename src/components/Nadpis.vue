@@ -9,18 +9,18 @@ export default {
 </script>
 
 <style>
-.nadpis {
-  font-family: "Arvo", serif;
+h1 {
+  font-family: 'Roboto Slab', serif;
   font-size: 25px;
   text-align:center;
   padding:25px;
 }
 
 @media (min-width: 600px) {
-.nadpis {
+h1 {
   position: absolute;
     top: 25px;
-    right: 125px;
+    left: 125px;
     font-size: 40px;
     padding-top:0;
   
