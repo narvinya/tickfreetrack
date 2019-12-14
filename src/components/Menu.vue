@@ -253,6 +253,8 @@ export default {
     position: absolute;
     font-size: 12px;
     z-index: 9000;
+    border-radius:7px;
+    overflow:hidden;
   }
 
   .routerLink {
@@ -264,11 +266,18 @@ export default {
     padding: 10px 20px;
   }
 
+
+
   .informacie:hover .dropdown-content {
     display: block;
   }
 .routerLink {
     text-transform: uppercase !important;
+  }
+
+.routerLink:hover {
+  text-decoration:underline;
+  cursor:pointer;
   }
 
 }
