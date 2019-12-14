@@ -98,7 +98,7 @@ export default {
 
   data() {
     return {
-      zoom: 12,
+      zoom: 17,
       center: latLng(49.2107581, 16.618815),
       url: "http://{s}.tile.osm.org/{z}/{x}/{y}.png",
       attribution:
@@ -141,7 +141,7 @@ export default {
     } else {
       return;
     }
-    setTimeout(this.location, 8000);
+    setTimeout(this.location, 1000);
   }
 }
 </script>
@@ -160,10 +160,10 @@ export default {
 }
 .ramecekMapa {
   top: 120px;
-  height: 470px;
+  height: 490px;
   width: 600px;
   padding: 0;
-  border: 10px solid rgba(63, 179, 157, 1);
+  border: 7px solid rgba(63, 179, 157, 1);
   border-radius: 10px;
   box-shadow: 10px 0 10px rgba(0, 0, 0, 0.2);
 }
@@ -190,7 +190,8 @@ export default {
 
 .hlaska {
   color: rgba(63, 179, 157, 1);
-  padding: 10px;
+  padding-top: 10px;
+ 
 }
 
 .nadpisH3 {

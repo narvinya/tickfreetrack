@@ -10,24 +10,22 @@
         <br />
         <div @click="nastavAktualniDruh(selected.id)" class="detailDruhu">
           <div class="kartickaDruhu">
+            <div class="nadpisDruhu">{{selected.nazev}}</div>
             <img v-bind:src="selected.obrazek" v-bind:alt="selected.nazev" class="obrazekKlistete" />
-            <div>
-              <strong>{{selected.nazev}}</strong>
-            </div>
           </div>
 
           <div class="info">
             <div>
-              <strong>Latinsky:</strong>
-              {{selected.latinskyNazev}}
+              <span class="label">Latinsky:</span>
+              <span>{{selected.latinskyNazev}}</span>
             </div>
             <div>
-              <strong>Nemoci:</strong>
-              {{selected.nemoci}}
+              <span class="label">Nemoci:</span>
+              <span>{{selected.nemoci}}</span>
             </div>
             <div>
-              <strong>Info:</strong>
-              {{selected.popisek}}
+              <span class="label">Info:</span>
+              <span>{{selected.popisek}}</span>
             </div>
           </div>
         </div>
@@ -78,7 +76,7 @@ export default {
         {
           id: 2,
           nazev: "Pijak lužný",
-          latinskyNazev: "Amblyomma americanum",
+          latinskyNazev: "Dermacentor variabilis",
           nemoci: "Tularemia, Rocky Mountain spotted fever",
           obrazek: "https://www.cdc.gov/ticks/images/geo/american_dog_tick.jpg",
           popisek:
@@ -106,12 +104,33 @@ export default {
           id: 5,
           nazev: "Kliešť lesný",
           latinskyNazev: "Dermacentor andersoni",
-          nemoci:
-            "Rocky Mountain spotted fever, Colorado tick fever, tularemia.",
+          nemoci: "Rocky Mountain spotted fever, Colorado tick fever, tularemia.",
           obrazek:
             "https://www.cdc.gov/ticks/images/geo/rocky_mountain_wood_tick.jpg",
           popisek:
             "Dospělí jedinci se živí primárně na velkých savcích. Larvy a nymfy na malých hlodavcích.  Dospělí jedinci jsou primárně spojeni s přenosem patogenů na člověka."
+        },
+        {
+          id: 6,
+          nazev: "Kliešť čiernonohý záp.",
+          latinskyNazev: "Ixodes pacificus",
+          nemoci:
+            "Anaplasmosis, Lymská borelioza. ",
+          obrazek:
+            "https://www.cdc.gov/ticks/images/geo/western_blacklegged_tick.jpg",
+          popisek:
+            "Nymfy často parazitují na ještěrkách a jiných malých živočiších, v důsledku čehož je infikovaných poměrně málo (~1%). Pokud se u člověka vyskztnou, pak ve stádiu nymfy nebo dospělé samice."
+        },
+         {
+          id: 7,
+          nazev: "Kliešť čiernonohý",
+          latinskyNazev: "Ixodes scapularis",
+          nemoci:
+            "Borrelia burgdorferi,Lyme disease, anaplasmosis, B. miyamotoi disease, ehrlichiosis, babesiosis, Powassan virus disease ",
+          obrazek:
+            "https://www.cdc.gov/ticks/images/geo/blacklegged_tick.jpg",
+          popisek:
+            "Největčí riziko napadení exuistuje během jara, léta a podzimu. Ovšem dospělí jedinci se mohou běžně vyskytovat také v zime, pokud teploty stouplnou nad nulu. Nejčasněji napadají nymfy a dospělé samičky."
         }
       ]
     };
@@ -133,16 +152,26 @@ export default {
 </script>
 
 <style>
+.label{
+  color: rgba(63, 179, 157, 1);
+  font-weight: bold;
+  padding-right: 10px;
+}
 .nadpis {
   padding: 5px 0 10px 30px;
   font-size: 20px;
+}
+.nadpisDruhu {
+  font-size: 20px;
+  font-weight: bold;
+  
 }
 .obalkaDruhu {
   display: flex;
   flex-wrap: wrap;
   padding: 10px;
   margin: 5px;
-  box-shadow: 2px 2px 2px 2px rgba(63, 179, 157, 1);
+  box-shadow: 2px 2px 5px 2px rgba(63, 179, 157, 1);
   border-radius: 10px;
   background-color: whitesmoke;
 }
@@ -161,7 +190,7 @@ export default {
 .detailDruhu {
   display: flex;
 }
-.info{
-  padding: 25px;
+.info {
+  padding: 30px 15px 5px 15px;
 }
 </style>
