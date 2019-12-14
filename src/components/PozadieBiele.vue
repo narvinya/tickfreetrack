@@ -21,6 +21,7 @@ export default {
   margin: 0 auto;
   margin-top: 50px;
   position: relative;
+  z-index:0;
 }
 
 @media (min-width: 600px) {

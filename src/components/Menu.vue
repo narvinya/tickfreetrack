@@ -17,17 +17,18 @@
           </router-link>
         </li>
 
-            <li class="mapaWeb">
+        <li class="mapaWeb">
           <router-link to="/mapa">
             <i class="fa fa-fw fa-map"></i> Mapa výskytu
           </router-link>
         </li>
-        <li class="informacie">
-          <router-link to="/informacie">
+        <li class="informacie" v-on:click="zobrazInfo">
+          <router-link to="/">
             <i class="fa fa-fw fa-info"></i> Info
             <i class="fa fa-fw fa-bars"></i>
+            {{zobrazeneInfo}}
           </router-link>
-          <ul class="dropdown-content">
+          <ul class="dropdown-content" v-show="zobrazen">
             <li>
               <router-link to="/prevencia">Prevencia</router-link>
             </li>
@@ -48,7 +49,7 @@
             </li>
           </ul>
         </li>
-  
+
         <li class="mapaMobil">
           <router-link to="/mapa">
             <i class="fa fa-fw fa-map"></i> Mapa
@@ -64,7 +65,19 @@
   </div>
 </template>
 <script>
-export default {};
+export default {
+  data: function() {
+    return {
+      zobrazeneInfo:false
+    };
+  },
+  methods: {
+    zobrazInfo() {
+      this.zobrazeneInfo = true
+      console.log("fungujem")
+    }
+  }
+};
 </script>
 
 <style>
@@ -79,7 +92,7 @@ export default {};
   }
 
   .cssmenu {
-    font-family: 'Roboto Slab', serif;
+    font-family: "Roboto Slab", serif;
     font-size: 15px;
     position: absolute;
     top: 60px;
@@ -87,9 +100,9 @@ export default {};
     background-color: rgba(63, 179, 157, 1);
   }
 
-.domovMobil {
-  max-width:30px;
-}
+  .domovMobil {
+    max-width: 30px;
+  }
 
   .cssmenu li {
     width: 25%;
@@ -125,9 +138,10 @@ export default {};
   }
 
   .dropdown-content {
-    display: none;
     position: absolute;
     font-size: 12px;
+        background-color: rgba(63, 179, 157, 1);
+
   }
 
   .informacie ul li a {
@@ -234,6 +248,7 @@ export default {};
     display: none;
     position: absolute;
     font-size: 12px;
+    z-index: 9000;
   }
 
   .informacie ul li a {
@@ -265,6 +280,10 @@ export default {};
 
   .informacie ul li a {
     text-transform: none;
+  }
+
+  .dropdown-content {
+    z-index: 9000;
   }
 }
 </style>
