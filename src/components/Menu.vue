@@ -7,56 +7,55 @@
     <div class="cssmenu">
       <ul class="cssmenu-content">
         <li class="domovWeb">
-          <router-link to="/">
+          <router-link class="routerLink" to="/">
             <i class="fa fa-fw fa-home"></i> Domov
           </router-link>
         </li>
         <li class="domovMobil">
-          <router-link to="/">
+          <router-link class="routerLink" to="/">
             <i class="fa fa-fw fa-home"></i>
           </router-link>
         </li>
 
         <li class="mapaWeb">
-          <router-link to="/mapa">
+          <router-link class="routerLink" to="/mapa">
             <i class="fa fa-fw fa-map"></i> Mapa výskytu
           </router-link>
         </li>
         <li class="informacie" v-on:click="zobrazInfo">
-          <router-link to="/">
+          <div class="routerLink">
             <i class="fa fa-fw fa-info"></i> Info
-            <i class="fa fa-fw fa-bars"></i>
-            {{zobrazeneInfo}}
-          </router-link>
-          <ul class="dropdown-content" v-show="zobrazen">
+            <i class="fa fa-fw fa-caret-down"></i>
+          </div>
+          <ul class="dropdown-content" v-show="zobrazeneInfo">
             <li>
-              <router-link to="/prevencia">Prevencia</router-link>
+              <router-link class="routerLink routerLink--sub" to="/prevencia">Prevencia</router-link>
             </li>
             <li>
-              <router-link to="/odstranenie">Ako správne odstrániť kliešťa</router-link>
+              <router-link class="routerLink routerLink--sub" to="/odstranenie">Ako správne odstrániť kliešťa</router-link>
             </li>
             <li>
-              <router-link to="/testovanie">Možnosti testovania kliešťa</router-link>
+              <router-link class="routerLink routerLink--sub" to="/testovanie">Možnosti testovania kliešťa</router-link>
             </li>
             <li>
-              <router-link to="/rizika">Riziká</router-link>
+              <router-link class="routerLink routerLink--sub" to="/rizika">Riziká</router-link>
             </li>
             <li>
-              <router-link to="/priznaky">Príznaky pri nákaze</router-link>
+              <router-link class="routerLink routerLink--sub" to="/priznaky">Príznaky pri nákaze</router-link>
             </li>
             <li>
-              <router-link to="/pomoc">Prvá pomoc</router-link>
+              <router-link class="routerLink routerLink--sub" to="/pomoc">Prvá pomoc</router-link>
             </li>
           </ul>
         </li>
 
         <li class="mapaMobil">
-          <router-link to="/mapa">
+          <router-link class="routerLink" to="/mapa">
             <i class="fa fa-fw fa-map"></i> Mapa
           </router-link>
         </li>
         <li class="lokacia">
-          <router-link to="/lokacia">
+          <router-link class="routerLink" to="/lokacia">
             <i class="fa fa-fw fa-crosshairs"></i> Pridať kliešťa
           </router-link>
         </li>
@@ -113,7 +112,7 @@ export default {
     width: auto;
   }
 
-  .cssmenu ul li a {
+  .routerLink {
     position: relative;
     box-sizing: border-box;
     display: inline-block;
@@ -125,7 +124,7 @@ export default {
     padding: 10px 5px 10px 5px;
   }
 
-  .cssmenu a:hover {
+  .routerLink:hover {
     background: rgb(27, 132, 218);
   }
 
@@ -144,7 +143,7 @@ export default {
 
   }
 
-  .informacie ul li a {
+  .routerLink {
     margin-left: 0;
     padding: 5px 10px 5px 10px;
   }
@@ -215,7 +214,7 @@ export default {
     display: none;
   }
 
-  .cssmenu ul li a {
+  .routerLink {
     position: relative;
     box-sizing: border-box;
     display: inline-block;
@@ -225,7 +224,7 @@ export default {
     color: #ffffff;
     text-decoration: none;
   }
-  .cssmenu ul li a:before {
+  .routerLink:before {
     content: "";
     position: absolute;
     left: 100%;
@@ -251,9 +250,13 @@ export default {
     z-index: 9000;
   }
 
-  .informacie ul li a {
+  .routerLink {
     margin-left: 0;
-    padding: 10px 15px 10px 15px;
+    padding: 10px 10px 10px 40px;
+  }
+
+  .routerLink--sub {
+    padding:10px 20px;
   }
 
   .informacie:hover .dropdown-content {
@@ -270,15 +273,19 @@ export default {
     right: 50px;
   }
 
-  .cssmenu ul li a {
-    text-transform: uppercase;
+  .routerLink {
+    text-transform: uppercase !important;
+  }
+
+  .routerLink--sub {
+    text-transform:none !important;
   }
 
   .dropdown-content {
     font-size: 16px;
   }
 
-  .informacie ul li a {
+  .informacie .routerLink {
     text-transform: none;
   }
 
