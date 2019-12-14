@@ -281,7 +281,7 @@ export default {
 
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 700px) {
   .cssmenu {
     font-size: 16px;
   }

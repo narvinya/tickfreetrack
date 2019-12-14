@@ -4,7 +4,7 @@
       <Ikona />
       <Nadpis />
       <Menu />
-      <buttonPridat />
+     
     </div>
 
     <div class="ramecekMapa">
@@ -136,9 +136,9 @@ export default {
 .mapa {
   position: absolute;
   top: 120px;
-  height: 460px;
+  height: 550px;
   width: 95%;
-  margin: 20px;
+  margin: 0 20px 0 0;
   padding: 10px;
   border: 10px solid rgba(63, 179, 157, 1);
   border-radius: 10px;
@@ -155,9 +155,15 @@ export default {
   padding: 10px;
   margin: 5px;
   position: relative;
-  top: 158px;
+  top: 135px;
   left: 100px;
   z-index: 1000;
   
+}
+
+@media(max-width:599px) {
+  .mapa {
+    
+  }
 }
 </style>

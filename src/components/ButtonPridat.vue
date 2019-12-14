@@ -13,7 +13,7 @@ export default {
   text-align: center;
   min-width: 80px;
   display: inline-block;
-  padding: 12px 20px 12px 20px;
+  padding: 12px 30px;
   border-radius: 100px;
   background: -moz-linear-gradient(
     top,

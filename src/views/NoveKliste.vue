@@ -1,9 +1,9 @@
 <template>
   <div class="PozadieLes">
     <ikona />
-    <h1>Pridať nový výskyt kliešťa</h1>
+    <h1>Pridať nový výskyt</h1>
     <menicko />
-    <div id="obalka">
+      <div class="mapaWrapper">
       <div class="mapa">
         
         <div>
@@ -17,7 +17,7 @@
           </div>
         </div>
       </div>
-
+      
       <div class="formular">
         <div>
           <p class="hlaska">{{hlaska}}</p>
@@ -59,8 +59,9 @@
             
         </div>
       </div>
+      </div>
     </div>
-  </div>
+ 
 </template>
 
 
@@ -125,7 +126,7 @@ export default {
       this.prenasec = "";
       this.message = "";
       this.datum = new Date();
-      this.hlaska = 'Nový kliešť bude úspešne pridaný'
+      this.hlaska = 'Nový kliešť bol úspešne pridaný'
     },
     newLocation(x){
       console.log(x);
@@ -146,25 +147,20 @@ export default {
 
 <style scoped>
 .formular {
-  position: absolute;
   background-image: linear-gradient(#f8ce82, #f4af6a);
   background-size: cover;
   background-position: center;
-  margin: 40px 20px 30px 30px;
+  margin: 45px 10px 30px 30px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
   border-radius: 10px;
   font-size: 25px;
   color: rgb(24, 54, 54);
-  left: 50%;
-  top: 20%;
   padding: 0 30px 15px 30px;
 }
 .ramecekMapa {
-  position: absolute;
   top: 120px;
-  height: 460px;
+  height: 470px;
   width: 600px;
-  margin: 100px 0px;
   padding: 0;
   border: 10px solid rgba(63, 179, 157, 1);
   border-radius: 10px;
@@ -172,8 +168,6 @@ export default {
 }
 .mapa {
   height: 460px;
-  width: 95%;
-  margin: 20px;
 }
 .mapanew {
   height: 600px;
@@ -182,7 +176,7 @@ export default {
   padding: 10px 20px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
   border-radius: 10px;
- 
+  width:85%;
   font-size: 18px;
 }
 .popisek {
@@ -192,12 +186,7 @@ export default {
   font-size: 18px;
   color: rgb(24, 54, 54);
 }
-.formular1 {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  max-width: 50%;
-}
+
 .hlaska {
   color: red;
   padding: 10px;
@@ -211,4 +200,60 @@ export default {
   margin-top:10px;
 }
 
+.mapaWrapper {
+  display:flex;
+  align-items:center;
+  margin-top:100px;
+  justify-content: space-between;
+}
+
+@media (max-width: 1100px) {
+ .mapaWrapper {
+   flex-wrap: wrap;
+justify-content: center;
+margin-top:135px;
+ }
+
+ .formular {
+ margin:45px 20px 20px 0px;
+ max-width:585px;
+ box-sizing: border-box;
+}
+
+.ramecekMapa {
+  max-width:600px;
+  box-sizing: border-box;
+}
+}
+@media (max-width: 650px) {
+    .ramecekMapa {
+    width:565px;
+    border:0;
+  
+  }
+
+  }
+
+  @media (max-width: 599px) {
+  .mapaWrapper {
+    margin-top:35px;
+
+  }
+  .ramecekMapa {
+    width:585px;
+  
+  }
+}
+
+@media (max-width: 500px) {
+  .ramecekMapa {
+    width:400px;
+  }
+}
+
+@media (max-width: 400px) {
+  .ramecekMapa {
+    width:350px;
+  }
+}
 </style>
