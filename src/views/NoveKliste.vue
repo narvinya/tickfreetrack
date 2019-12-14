@@ -55,7 +55,7 @@
               />
             </label>
             <div class="buttonWrap">
-            <button @click="ulozitKliste"    class="pridatButton"  v-show="!hlaska">Uložiť</button>
+            <button @click="ulozitKliste"    class="pridatButton" v-show="!hlaska">Uložiť</button>
              <ButtonDalej v-show="hlaska" link="/priznaky" />
             </div>
             
@@ -189,7 +189,7 @@ export default {
 }
 
 .hlaska {
-  color: red;
+  color: rgba(63, 179, 157, 1);
   padding: 10px;
 }
 

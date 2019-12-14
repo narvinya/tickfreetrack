@@ -32,11 +32,7 @@ const routes = [
     path: '/odstranenie',
     name: 'odstraneniekliesta',
     component: OdstranenieKliesta
-  }, {
-    path: '/foto',
-    name: 'odfotit',
-    component: Odfotit
-  },
+  }, 
   {
     path: '/novekliste',
     name: 'znovekliste',
