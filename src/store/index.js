@@ -36,6 +36,18 @@ export default new Vuex.Store({
         datum: new Date(2019, 10, 15),
         note: "Kliste se nepřisalo, ale zato jich bylo pět nebo šest najednou",
         prenasec: "pes"
+      },
+      {
+        coordinates: latLng(48.931090561853786, 14.245518017560245),
+        datum: new Date(2019, 6, 8),
+        note: " ",
+        prenasec: "pes"
+      },
+      {
+        coordinates: latLng(49.245678, 16.710495),
+        datum: new Date(2019, 7, 13),
+        note: " ",
+        prenasec: "pes"
       }
     ],
   },
