@@ -20,6 +20,7 @@
         <div class="nazovPatogen">{{vybranyPatogen.nazov}}</div>
         <div class="latinskyPatogen">{{vybranyPatogen.latinsky}}</div>
         <div class="popisPatogen">{{vybranyPatogen.popis}}</div>
+        <div class="popisPatogen">{{vybranyPatogen.obrazok}}</div>
         
         </div>
       </div>
