@@ -5,7 +5,7 @@
     <h1>Príznaky pri nákaze</h1>
     <Menu />
     <div class="kontajner">
-      <p class="nadpis">Druhy kliešťov:</p>
+      <h2>Druhy kliešťov</h2>
       <div class="obalkaDruhu">
         <br />
         <div @click="nastavAktualniDruh(selected.id)" class="detailDruhu">

@@ -7,7 +7,7 @@
     />
     <div>
       <Ikona />
-      <Nadpis />
+      <h1>Mapa výskytu</h1>
       <Menu />
      
     </div>

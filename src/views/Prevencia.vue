@@ -118,7 +118,6 @@ export default {
 .textPrevencia {
   padding: 15px 15px 0px 15px;
   font-size: 12px;
-  font-family: "Roboto Slab", serif;
 }
 
 

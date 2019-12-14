@@ -7,9 +7,7 @@
     <img class="fotoLab" src="../../public/images/Lab.jpg" />
     <div class="textTestovanie">
       <p>
-        There are places where the public can have ticks tested to see if they contain the Lyme bacteria, Borrelia burgdorferi, or to see if they contain other disease organisms which can infect humans or other animals. There are generally charges for these services.
-        LDA does not make recommendations about whether people should have ticks tested, reliability of tick testing, or whether people should wait for the results before seeking/getting treatment. Those are decisions that need to be made after reviewing material on the topic and discussing the benefits/risks with a professional.
-        Check with the labs for proper packaging and mailing of the ticks, the types of organisms tested for and the associated costs (e.g., Lyme disease, anaplasmosis, ehrlichiosis)
+        Ak sa obávate, že kliešť mohol byť nakazený, máte v zásade dve možnosti. Tou prvou je pravidelná kontrola miesta prisatia a sledovanie príznakov infekcie. Lekár vám tiež môže vyhotoviť laboratórne testy, ktoré sú pozitívne väčšinou až za niekoľko týždňov po infekcii. Druhou možnosťou je poslať kliešťa na laboratórne vyšetrenie. Ako na to? Odstráneného kliešťa vložíte do igelitového vrecka a priložíte k nemu kúsok navlhčeného (nie mokrého) papierika alebo buničiny. Na internete alebo z odporúčania lekára či známeho si nájdete laboratórium, ktoré sa testovaním kliešťov zaoberá. Laboratóriá väčšinou vyžadujú vyplnení objednávky vyšetrenia a jej zaslanie spolu s kliešťom poštou na príslušnú adresu. Platba sa väčšinou vykonáva zaslaním peňazí na bankový účet. Informácie o výsledkoch testu vám bude oznámená najčastejšie do jedného týždňa od zaslania kliešťa. Kliešťa môžete nechať vyšetriť na prítomnosť lymskej boreliózy, kliešťovej encefalitídy, anaplazmózy, babeziózy a bartonelózy.
       </p>
     </div>
   </div>

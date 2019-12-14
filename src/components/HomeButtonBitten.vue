@@ -1,5 +1,5 @@
 <template>
-  <router-link to="/odstranenie" class="bittenButton">Bitten by a tick</router-link>
+  <router-link to="/odstranenie" class="bittenButton">Odstránenie kliešťa</router-link>
 </template>
 
 <script>
@@ -13,7 +13,7 @@ export default {};
   border-radius: 100px;
   background: -moz-linear-gradient(top, #ff5959, #b62f2f);
   background: linear-gradient(to bottom, #ff5959, #b62f2f);
-  font-size: 14px;
+  font-size: 10px;
   color: #ffffff;
   text-decoration: none;
   text-transform: uppercase;
@@ -44,7 +44,7 @@ export default {};
     left: 30px;
     text-align: center;
     padding: 12px 30px 12px 30px;
-    font-size: 17px;
+    font-size: 14px;
     max-width: none;
   }
 }
