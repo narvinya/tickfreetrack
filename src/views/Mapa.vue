@@ -43,7 +43,7 @@
 
         <l-marker
           v-for="kliste in klistata"
-          v-bind:key="kliste.note "
+          v-bind:key="kliste.note"
           :lat-lng="kliste.coordinates"
         >
           <l-popup class="popisekKlistete">

@@ -7,6 +7,7 @@
     <div class="kontajner">
       <div class="textRizika">
         <p>Kliešte môžu byť nositeľmi patogénov spôsobujúcich ochorenia ľudí, ako sú:</p>
+        
         <ul class="zoznamPatogen">
           <li
             v-on:click="vyberPatogen(patogen)"
@@ -177,8 +178,7 @@ export default {
 .patogenWrap {
   display:flex;
   flex:1;
-
-margin-top:10px;
+  margin-top:10px;
 }
 
 
