@@ -1,11 +1,18 @@
 <template>
 
-  <router-link to="/novekliste" class="buttonDalej">Ďalej</router-link>
+  <router-link :to="link" class="buttonDalej">Ďalej</router-link>
  
 </template>
 
 <script>
-export default {};
+export default {
+  props: {
+    link: {
+      type: String,
+      required:true
+    }
+  }
+};
 </script>
 
 <style>

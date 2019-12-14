@@ -9,7 +9,6 @@ import Odfotit from '../views/Odfotit.vue';
 import NoveKliste from '../views/NoveKliste.vue';
 import Prevencia from '../views/Prevencia.vue';
 import PriznakyPriNakaze from '../views/PriznakyPriNakaze.vue';
-import PrvaPomoc from '../views/PrvaPomoc.vue';
 import MoznostiTestovania from '../views/MoznostiTestovania.vue';
 import Rizika from '../views/Rizika.vue';
 
@@ -52,11 +51,6 @@ const routes = [
     path: '/priznaky',
     name: 'priznaky',
     component: PriznakyPriNakaze
-  },
-  {
-    path: '/pomoc',
-    name: 'prvaPomoc',
-    component: PrvaPomoc
   },
   {
     path: '/testovanie',

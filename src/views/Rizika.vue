@@ -17,7 +17,7 @@
           >{{patogen.nazov}}
           </li>
         </ul>
-        <div class="detailPatogen">
+        <div class="detailPatogen" v-show="vybranyPatogen.nazov.length">
         <div class="nazovPatogen">{{vybranyPatogen.nazov}}</div>
         <div class="latinskyPatogen">{{vybranyPatogen.latinsky}}</div>
         <div class="popisPatogen">{{vybranyPatogen.popis}}</div>
@@ -69,7 +69,7 @@ export default {
           nazov: "Babezióza",
           latinsky: "Babesia microti",
           obrazok: "https://upload.wikimedia.org/wikipedia/commons/5/52/Babiesa_spp.jpg",
-          popis: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum ad, rem doloribus pariatur quis quas itaque ullam odit autem veritatis. Nam, earum. Fugit modi rerum facilis voluptates tenetur officia deserunt repellendus, consequuntur iste praesentium repellat, quidem quas delectus, dicta quisquam"
+          popis: "Babezióza je ochorenie podobné malárii spôsobené parazitom, buď Babesia microti, B. duncani alebo B. divergens. U starších ľudí môze byť fatálna. Babezióza môže byť závažnejšia u pacientov s koexistujúcou lymskou boreliózou. Medzi príznaky patria: horúčka, zimnica, únava, bolesť hlavy, bolesť svalov, potenie a anémia. Testy na babeziózu: IFA (IgG a IgM) a PCR. Medzi kliešte, ktoré prenášajú babesiózu, patrí Ixodes Scapularis a Ixodes Pacificus, ktoré prenášajú aj boreliózu. Viacnásobné infekcie sa môžu prenášať z uhryznutia toho istého kliešťa. Babezióza sa môže taktiež preniesť prostredníctvom krvných transfúzií. V roku 2018 úrad FDA schválil skríning krvi pre prítomnosť Babesia microti."
         },
         {
           nazov: "Bartonellosis",
@@ -78,24 +78,15 @@ export default {
           popis: "Bartonella henselae, ako jeden z druhov bartonel, spôsobuje chorobu z mačacieho škrabnutia. Z údajov zverejnených Centrom kontroly a prevenciou chorôb v Atlante vyplýva, že Bartonella henselae bola objavená v roku 1992 . Hlavným rezervoárom sú kliešť rodu Ixodes ricinus a mačky, baktérie sú na tieto zvieratá prenášané mačacími blchami. Za možný je považovaný aj prenos pri saní blchy alebo kliešťa. Po 1-7 týždňoch dochádza k zdureniu regionálne lymfatické uzliny. K systémovým príznakom patria bolesti hlavy, subfebrílie, slabosť, malátnosť, závraty, únava, bolesť kĺbov, svalov, chrbta a očí. Diagnóza je stanovovaná sérologickým preukazom špecifických protilátok IgM a IgG metódou nepriamej imunofluorescencie.",
         },
         {
-          nazov: "Bourbon Virus",
-          latinsky: "Bourbon virus",
-          obrazok: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum ad, rem doloribus pariatur quis quas itaque ullam odit autem veritatis. Nam, earum. Fugit modi rerum facilis voluptates tenetur officia deserunt repellendus, consequuntur iste praesentium repellat, quidem quas delectus, dicta quisquam",
-        },
-        {
-          nazov: "Ehrlichióza",
-          latinsky: "Ehrlichia chaffeensis",
-          obrazok: "",
-        },
-        {
           nazov: "Lymská borelióza",
           latinsky: "Borrelia burgdorferi, Borrelia afzelii, Borrelia garinii", 
           obrazok: "",
         },
         {
-          nazov: "Rickettsia",
+          nazov: "Rocky Mountain spotted fever",
           latinsky: "Rickettsia parkeri",
           obrazok: "",
+          popis:"Pôvodcom Rocky Mountain spotted fever je rickettsia. Riketsie sú gramnegatívne, nepohyblivé baktérie. Žijú intracelulárne, čiže výlučne vo vnútri zvieracích alebo ľudských buniek. Ich uprednostňovaným miestom pobytu sú črevné bunky kliešťov, roztočov, bĺch a vší. Inkubačná doba horúčky Skalistých hôr je krátka a trvá cca. tri dni až jeden týždeň. Ochorenie sa začína bolesťami hlavy, bolesťami končatín a horúčkou 40-41°C. U väčšiny postihnutých (cca. 80 %) sa objavujú masívne kožné vyrážky po celom tele. Začínajú sa väčšinou na pažiach a nohách a odtiaľ sa rozširujú na celé telo. Rovnako postihnuté sú aj dlane a chodidlá. Diagnóza ochorenia sa stanovuje pomocou sérologických krvných vyšetrení. Určité protilátky, ako napr. lgM, sú dokázateľné už po niekoľkých dňoch. Diagnóza môže byť však stanovená aj na základe vzorky tkaniva kože. Liečenie postihnutých by malo prebiehať v nemocnici a pozostáva z podávania antibiotík. Používajú sa tetracyklíny a chloramfenikol."
         },
         {
           nazov: "Tularemia",
@@ -104,9 +95,8 @@ export default {
         }
       ],
       vybranyPatogen: {
-        nazov: "Babezióza",
+        nazov: "",
         latinsky: "",
-        obrazok: "",
         popis:"",
       }
     };

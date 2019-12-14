@@ -47,10 +47,7 @@
               <router-link class="routerLink routerLink--sub" to="/rizika">Riziká</router-link>
             </li>
             <li class="submenuItem">
-              <router-link class="routerLink routerLink--sub" to="/priznaky">Príznaky pri nákaze</router-link>
-            </li>
-            <li class="submenuItem">
-              <router-link class="routerLink routerLink--sub" to="/pomoc">Prvá pomoc</router-link>
+              <router-link class="routerLink routerLink--sub" to="/priznaky">Druhy kliešťov</router-link>
             </li>
           </ul>
         </li>
@@ -93,6 +90,7 @@ export default {
   .cssmenu ul {
     list-style: none;
     padding: 0;
+    margin:0;
   }
 
   .cssmenu {

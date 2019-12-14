@@ -55,8 +55,8 @@
               />
             </label>
             <div class="buttonWrap">
-            <button @click="ulozitKliste"    class="pridatButton">Uložiť</button>
-             <ButtonDalej v-show="hlaska"/>
+            <button @click="ulozitKliste"    class="pridatButton"  v-show="!hlaska">Uložiť</button>
+             <ButtonDalej v-show="hlaska" link="/priznaky" />
             </div>
             
         </div>
