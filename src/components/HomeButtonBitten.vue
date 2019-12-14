@@ -13,7 +13,7 @@ export default {};
   border-radius: 100px;
   background: -moz-linear-gradient(top, #ff5959, #b62f2f);
   background: linear-gradient(to bottom, #ff5959, #b62f2f);
-  font: 14px "Arvo", serif;
+  font-size: 14px;
   color: #ffffff;
   text-decoration: none;
   text-transform: uppercase;
@@ -44,7 +44,7 @@ export default {};
     left: 30px;
     text-align: center;
     padding: 12px 30px 12px 30px;
-    font: 17px "Arvo", serif;
+    font-size: 17px;
     max-width: none;
   }
 }

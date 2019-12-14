@@ -4,33 +4,31 @@
     <h1>Pridať nový výskyt kliešťa</h1>
     <menicko />
     <div id="obalka">
-      <div class="mapa"> <!-- mapa -->
+      <div class="mapa">
         <div>
-          <div class="ramecekMapa"> <!--ramecekMapa-->
-            <l-map :zoom="zoom" :center="center" class="">
+          <div class="ramecekMapa">
+            <l-map :zoom="zoom" :center="center" class>
               <l-tile-layer :url="url" :attribution="attribution" />
 
-              <l-marker :lat-lng="center">
-               
-              </l-marker>
+              <l-marker :lat-lng="center"></l-marker>
             </l-map>
           </div>
         </div>
       </div>
 
       <div class="formular">
-        
         <div>
-          <p class="hlaska"> {{hlaska}} </p>
-          <h2>Zadat novy vyskyt klistete</h2>
-          <div class="formular1">
+          <p class="hlaska">{{hlaska}}</p>
+          <h3 class="nadpisH3">Pridať nový výskyt kliešťa</h3>
+            <div>
+              <label class="popisek">
+                Kto kliešťa prenášal: 
+                <span>(človek, pes, ...)</span>
+                <input type="text" v-model="prenasec" class="policko" />
+              </label>
+            </div>
             <label class="popisek">
-              Kdo kliste prenasel:
-              <input type="text" v-model="prenasec" class="policko" />
-            </label>
-
-            <label class="popisek">
-              Popis vyskytu:
+              Popis výskytu:
               <textarea
                 class="policko"
                 v-model="message"
@@ -38,12 +36,14 @@
                 cols="45"
                 rows="6"
                 wrap="hard"
-                placeholder="vlozte poznamku, pokud by mohla byt uzitecna pro dalsi uzivatele. dekujeme"
+                placeholder="Vložte poznámku, pokiaľ by mohla byť užitočná pre ďalších užívateľov. Ďakujeme."
               ></textarea>
             </label>
 
             <label class="popisek">
-              Datum nalezu:
+              <div>
+              Dátum nálezu:
+              </div>
               <input
                 type="date"
                 :value="datum && datum.toISOString().split('T')[0]"
@@ -51,11 +51,10 @@
                 class="policko"
               />
             </label>
-            
-            <button @click="ulozitKliste" class="pridatButton">Ulozit kliste</button>
-          </div>
+            <div class="buttonWrap">
+            <button @click="ulozitKliste" class="pridatButton">Uložiť</button>
+            </div>
         </div>
-       
       </div>
     </div>
   </div>
@@ -99,7 +98,7 @@ export default {
       prenasec: " ",
       message: "",
       datum: new Date(),
-      hlaska: ''
+      hlaska: ""
     };
   },
   methods: {
@@ -118,12 +117,12 @@ export default {
         coordinates: latLng(this.center),
         note: this.message,
         prenasec: this.prenasec,
-        datum: this.datum,
+        datum: this.datum
       });
       this.prenasec = "";
       this.message = "";
       this.datum = new Date();
-      this.hlaska = 'Nové klíště bylo úspšně přidáno'
+      this.hlaska = "Nový kliešť bude úspešne pridaný";
     }
   },
   mounted() {
@@ -145,15 +144,13 @@ export default {
   background-size: cover;
   background-position: center;
   margin: 40px 20px 30px 30px;
-  padding-top: 30px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
   border-radius: 10px;
-  font-family: "Arvo", serif;
   font-size: 25px;
-  text-align: center;
   color: rgb(24, 54, 54);
   left: 50%;
   top: 20%;
+  padding: 0 30px 15px 30px;
 }
 .ramecekMapa {
   position: absolute;
@@ -167,27 +164,24 @@ export default {
   box-shadow: 10px 0 10px rgba(0, 0, 0, 0.2);
 }
 .mapa {
-  
-  
   height: 460px;
   width: 95%;
   margin: 20px;
-
 }
-.mapanew{
+.mapanew {
   height: 600px;
 }
 .policko {
   padding: 10px 20px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
   border-radius: 10px;
-  font-family: "Arvo", serif;
+ 
   font-size: 18px;
 }
 .popisek {
   margin: 0;
-  padding: 10px 20px;
-  font-family: "Arvo", serif;
+ padding: 10px 0;
+ 
   font-size: 18px;
   color: rgb(24, 54, 54);
 }
@@ -197,30 +191,17 @@ export default {
   justify-content: space-between;
   max-width: 50%;
 }
-.hlaska{
+.hlaska {
   color: red;
   padding: 10px;
 }
-.pridatButton {
-    
-    bottom: 30px;
-   
-    /*display: inline-block;
-    text-align: center;*/
-    padding: 12px 80px 12px 80px;
-    border-radius: 100px;
-    background:white;
-    font: bold 25px "Arvo", serif;
-    color: rgba(63, 179, 157, 1);
-    text-decoration: none;
-    text-transform: uppercase;
-    border:0;
+
+.nadpisH3 {
+  margin: 5px 15px 10px 0px;
+  
 }
-.pridatButton:hover {
-    background: #720000;
-    background: -moz-linear-gradient(top, #720000, #460000);
-    background: linear-gradient(to bottom, #720000, #460000);
-    color: #ffffff;
-    text-decoration: none;
+.buttonWrap {
+  margin-top:10px;
 }
+
 </style>

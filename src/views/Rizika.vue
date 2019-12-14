@@ -163,8 +163,6 @@ export default {
  
 }
 
-
-
 .latinskyPatogen {
   
   font-style: italic;

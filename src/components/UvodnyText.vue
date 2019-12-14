@@ -13,7 +13,7 @@ export default {};
 .uvodnyText {
   text-align: left;
   position: absolute;
-  font-family: "Arvo", serif;
+  
   font-size: 15px;
   top: 110px;
   margin-left: 15px;

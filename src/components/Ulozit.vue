@@ -18,7 +18,7 @@ export default {
     padding: 12px 80px 12px 80px;
     border-radius: 100px;
     background:white;
-    font: bold 25px "Arvo", serif;
+    font: bold 25px;
     color: rgba(63, 179, 157, 1);
     text-decoration: none;
     text-transform: uppercase;

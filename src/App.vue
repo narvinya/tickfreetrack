@@ -6,11 +6,16 @@
 
 <script>
 export default {
-//efeefe
-// zdarec
-//pokus2 ci to vieme
+
 }
 </script>
 
 <style>
+
+@import url("https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap");
+
+body {
+  font-family:'Roboto Slab'
+}
+
 </style>

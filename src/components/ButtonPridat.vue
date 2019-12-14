@@ -10,26 +10,38 @@ export default {
 
 <style>
 .pridatButton {
-    position:absolute;
-    bottom:30px;
-    right:650px;
-    display: inline-block;
-    text-align: center;
-    padding: 12px 80px 12px 80px;
-    border-radius: 100px;
-    background:white;
-    font: bold 25px "Arvo", serif;
-    color: rgba(63, 179, 157, 1);
-    text-decoration: none;
-    text-transform: uppercase;
-    border:0;
+  text-align: center;
+  min-width: 80px;
+  display: inline-block;
+  padding: 12px 20px 12px 20px;
+  border-radius: 100px;
+  background: -moz-linear-gradient(
+    top,
+    rgba(63, 179, 157, 1),
+    rgba(38, 109, 96)
+  );
+  background: linear-gradient(
+    to bottom,
+    rgba(63, 179, 157, 1),
+    rgb(38, 109, 96)
+  );
+  font: 14px 'Roboto Slab', serif;
+  color: #ffffff;
+  text-decoration: none;
+  text-transform: uppercase;
+  border: 0;
 }
+
 .pridatButton:hover,
 .pridatButton:focus {
-    background: #720000;
-    background: -moz-linear-gradient(top, #720000, #460000);
-    background: linear-gradient(to bottom, #720000, #460000);
-    color: #ffffff;
-    text-decoration: none;
+  background: #720000;
+  background: -moz-linear-gradient(top, #720000, #460000);
+  background: linear-gradient(to bottom, #720000, #460000);
+  color: #ffffff;
+  text-decoration: none;
+}
+
+@media (min-width: 600px) {
+ 
 }
 </style>

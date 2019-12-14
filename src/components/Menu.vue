@@ -97,7 +97,7 @@ export default {
   }
 
   .cssmenu {
-    font-family: "Roboto Slab", serif;
+    font-family: 'Roboto Slab', serif;
     font-size: 15px;
     position: absolute;
     top: 60px;
@@ -170,7 +170,6 @@ export default {
   }
 
   .cssmenu {
-    font-family: "Arvo", serif;
     font-size: 13px;
     line-height: 1em;
     border-radius: 2px;

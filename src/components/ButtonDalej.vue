@@ -26,7 +26,7 @@ export default {};
     rgba(63, 179, 157, 1),
     rgb(38, 109, 96)
   );
-  font: 14px "Arvo", serif;
+  font-size: 14px;
   color: #ffffff;
   text-decoration: none;
   text-transform: uppercase;

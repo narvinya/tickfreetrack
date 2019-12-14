@@ -10,7 +10,7 @@ export default {
 
 <style>
 .nadpisBiely {
-  font-family: "Arvo", serif;
+  
   font-size: 25px;
   text-align:center;
   padding:25px;
