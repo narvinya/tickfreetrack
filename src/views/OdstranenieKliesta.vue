@@ -4,7 +4,6 @@
     <Ikona />
     <h1>Odstránenie kliešťa</h1>
     <Menu />
-    
     <div class="kontajner">
        <StopZnacka />
     <div class="textOdstranenie">
@@ -30,7 +29,7 @@
         (najviac jednu otáčku) striedavo na obe strany. Ak napriek tomu stále drží, musíme ťah proti koži zväčšovať. Napokon sa uvoľní a podarí sa vybrať ho z rany celého.
         Po odstránení očistite oblasť antiseptickým prostriedkom, ako je napríklad alkohol alebo mydlo a voda.
       </p>
-      <buttonDalej>Ďalej</buttonDalej>
+    <ButtonDalej />
     </div>
   </div>
   </div>
