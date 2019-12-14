@@ -1,7 +1,6 @@
 <template>
   <p class="uvodnyText">
-    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit
-    in vulputate velit esse molestie consequat.
+    Hlavnou myšlienkou tohto webu je sledovanie výskytu kliešťov v prírode. Užívateľ môže zadať lokáciu, kde prišiel do kontaktu s týmto malým nebezpečným parazitom. Vďaka tomu môžete lepšie naplánovať výlet do prírody a prípadnú prevenciu. Čím viac ľudí bude zadávať, kde sa kliešte vyskytujú, tým lepšia bude informovanosť verejnosti. Vopred Vám za všetky príspevky ďakujeme. 
   </p>
 </template>
 
