@@ -1,30 +1,53 @@
 <template>
   <div class="PozadieLes">
-   
-    <div >
-     
+    <div>
       <Ikona />
       <Nadpis />
       <Menu />
-      <buttonPridat/>
+      <buttonPridat />
     </div>
 
     <div class="ramecekMapa">
 
+      <select name="mesice" v-model="mesic" class="filtrMapa">
+        <option value="1">leden</option>
+        <option value="2">unor</option>
+        <option value="3">brezen</option>
+        <option value="4">duben</option>
+        <option value="5" >kveten</option>
+        <option value="6">cerven</option>
+        <option value="7">cervenec</option>
+        <option value="8">srpen</option>
+        <option value="9">zari</option>
+        <option value="10">rijen</option>
+        <option value="11">listopad</option>
+        <option value="12" >prosinec</option>
+      </select> 
+
+      <select name="roky" v-model="rok" class="filtrMapa">
+        <option value="2017">2017</option>
+        <option value="2018">2018</option>
+        <option value="2019">2019</option>
+      </select>
+
+      <button @click="vymazatFiltr" class="filtrMapa">VYMAZAT FILTR</button>
+
       <l-map :zoom="zoom" :center="center" class="mapa">
         <l-tile-layer :url="url" :attribution="attribution" />
-        
-        <l-marker v-for="kliste in klistata" v-bind:key="kliste.note " :lat-lng="kliste.coordinates">
+
+        <l-marker
+          v-for="kliste in klistata"
+          v-bind:key="kliste.note "
+          :lat-lng="kliste.coordinates"
+        >
           <l-popup class="popisekKlistete">
-            <div >
-            
+            <div>
               <p v-show="showParagraph">{{kliste.note}}</p>
               <p v-show="showParagraph">{{ kliste.datum.toLocaleDateString() }}</p>
               <button>Editovat kliste</button>
             </div>
           </l-popup>
         </l-marker>
-
       </l-map>
     </div>
   </div>
@@ -35,7 +58,7 @@ import Ikona from "@/components/Ikona.vue";
 //import MapaObrazok from "@/components/MapaObrazok.vue";
 import Menu from "@/components/Menu.vue";
 import Nadpis from "@/components/Nadpis.vue";
-import ButtonPridat from '@/components/ButtonPridat.vue';
+import ButtonPridat from "@/components/ButtonPridat.vue";
 
 import { latLng } from "leaflet";
 import {
@@ -59,7 +82,7 @@ export default {
     LPopup,
     LTooltip,
     LIcon,
-    'buttonPridat' : ButtonPridat
+    buttonPridat: ButtonPridat
   },
   data() {
     return {
@@ -69,12 +92,28 @@ export default {
       attribution:
         '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors',
 
-      showParagraph: true
+      showParagraph: true,
+      mesic: '',
+      rok: '',
     };
   },
+  methods:{
+    vymazatFiltr(){
+      this.mesic= '';
+      this.rok= '';
+    }
+    },
   computed: {
-    klistata () {
-      return this.$store.state.klistata
+    klistata() {
+      let klistata = this.$store.state.klistata;
+      if (this.mesic) {
+        klistata = klistata.filter((kliste) => kliste.datum.getMonth() === Number(this.mesic) - 1)
+      }
+      if (this.rok) {
+        klistata = klistata.filter((kliste) => kliste.datum.getFullYear() === Number(this.rok))
+      }
+
+      return klistata
     }
   }
 };
@@ -89,7 +128,7 @@ export default {
   background-position: center;
   position: relative;
 }
-.ramecekMapa{
+.ramecekMapa {
   position: relative;
   margin: 0;
   padding: 0;
@@ -105,10 +144,20 @@ export default {
   border-radius: 10px;
   box-shadow: 10px 0 10px rgba(0, 0, 0, 0.2);
 }
-.popisekKlistete{
+.popisekKlistete {
   color: rgb(8, 68, 52);
 }
-.nazevKlistete{
+.nazevKlistete {
   font-weight: bold;
+}
+.filtrMapa{
+  border: 1px solid rgba(63, 179, 157, 1);
+  padding: 10px;
+  margin: 5px;
+  position: relative;
+  top: 158px;
+  left: 100px;
+  z-index: 1000;
+  
 }
 </style>

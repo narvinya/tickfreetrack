@@ -4,7 +4,7 @@ import Home from '../views/Home.vue';
 import Informacie from '../views/Informacie.vue';
 import Mapa from '../views/Mapa.vue';
 import OdstranenieKliesta from '../views/OdstranenieKliesta.vue';
-import ZadatLokaciu from '../views/ZadatLokaciu.vue';
+
 import Odfotit from '../views/Odfotit.vue';
 import NoveKliste from '../views/NoveKliste.vue';
 import Prevencia from '../views/Prevencia.vue';
@@ -29,10 +29,6 @@ const routes = [
     path: '/mapa',
     name: 'mapa',
     component: Mapa
-  }, {
-    path: '/lokacia',
-    name: 'zadatlokaciu',
-    component: ZadatLokaciu
   }, {
     path: '/odstranenie',
     name: 'odstraneniekliesta',

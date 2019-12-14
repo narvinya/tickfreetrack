@@ -39,8 +39,7 @@ import Nadpis from "@/components/Nadpis.vue";
 import PozadieLes from "@/components/PozadieLes.vue";
 import PozadieZelene from "@/components/PozadieZelene.vue";
 import PozadieLesSmall from "@/components/PozadieLesSmall.vue";
-import PatogenZoznam from "@/components/PatogenZoznam.vue";
-import PatogenDetail from "@/components/PatogenDetail.vue";
+
 
 export default {
   components: {
@@ -50,7 +49,7 @@ export default {
     PozadieLes: PozadieLes,
     PozadieZelene: PozadieZelene,
     PozadieLesSmall: PozadieLesSmall,
-    PatogenDetail: PatogenDetail
+   
   },
   computed: {
     patogeny() {

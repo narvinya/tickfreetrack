@@ -5,9 +5,11 @@
     <menicko />
     <div id="obalka">
       <div class="mapa">
+        
         <div>
           <div class="ramecekMapa">
-            <l-map :zoom="zoom" :center="center" class>
+          
+            <l-map :zoom="zoom" :center="center" class @update:center="newLocation">
               <l-tile-layer :url="url" :attribution="attribution" />
 
               <l-marker :lat-lng="center"></l-marker>
@@ -54,6 +56,7 @@
             <div class="buttonWrap">
             <button @click="ulozitKliste" class="pridatButton">Uložiť</button>
             </div>
+            
         </div>
       </div>
     </div>
@@ -122,8 +125,12 @@ export default {
       this.prenasec = "";
       this.message = "";
       this.datum = new Date();
-      this.hlaska = "Nový kliešť bude úspešne pridaný";
-    }
+      this.hlaska = 'Nový kliešť bude úspešne pridaný'
+    },
+    newLocation(x){
+      console.log(x);
+      this.center = latLng(x);
+    },
   },
   mounted() {
     if ("geolocation" in navigator) {
@@ -134,7 +141,7 @@ export default {
     }
     setTimeout(this.location, 8000);
   }
-};
+}
 </script>
 
 <style scoped>
