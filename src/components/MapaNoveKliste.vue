@@ -1,27 +1,24 @@
 <template>
   <div>
-<div class="ramecekMapa">
-      <l-map :zoom="zoom" :center="center" >
+    <div class="ramecekMapa">
+      <l-map :zoom="zoom" :center="center">
         <l-tile-layer :url="url" :attribution="attribution" />
-        
-        <l-marker :lat-lng="withIcon">
+
+        <l-marker :lat-lng="center">
           <l-popup class="popisekKlistete">
-            <div >
+            <div>
               <strong>Nove kliste</strong>
               <p v-show="showParagraph">Toto kliste bylo obzvlast neprijemne</p>
               <button>Editovat kliste</button>
             </div>
           </l-popup>
         </l-marker>
-
       </l-map>
     </div>
-
   </div>
 </template>
 
 <script>
-
 import { latLng } from "leaflet";
 import {
   LMap,
@@ -32,35 +29,55 @@ import {
   LIcon
 } from "vue2-leaflet";
 
-
 export default {
-
   components: {
     LMap,
     LTileLayer,
     LMarker,
     LPopup,
     LTooltip,
-    LIcon,
-},
-data() {
+    LIcon
+  },
+  data() {
     return {
       zoom: 12,
-      center: latLng(49.185775, 16.625585),
+      center: latLng(49.2107581, 16.6188150),
       url: "http://{s}.tile.osm.org/{z}/{x}/{y}.png",
       attribution:
         '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors',
-      withPopup: latLng(49.206807, 16.607908),
-      kliste2: latLng(49.211577, 16.710495),
-      withIcon: latLng(49.215666, 16.710495),
-      showParagraph: true
+
+      showParagraph: true,
+      
     };
-}
-}
+  },
+  methods: {
+    success(position) {
+      const latitude = position.coords.latitude;
+      const longitude = position.coords.longitude;
+      this.center = latLng(latitude, longitude);
+
+    },
+    onError() {},
+    location(){
+      navigator.geolocation.getCurrentPosition(this.success, this.onError);
+    }
+  },
+  mounted() {
+    if ("geolocation" in navigator) {
+      console.log("geolokace je k dispozici MapaNoveKliste.vue");
+    } else {
+      console.log("geolocation IS NOT available");
+      return;
+    }
+    setTimeout(this.location, 1000)
+    
+  }
+};
 </script>
 
+
 <style scoped>
-.ramecekMapa{
+.ramecekMapa {
   position: absolute;
   top: 120px;
   height: 460px;
@@ -77,7 +94,7 @@ data() {
   height: 460px;
   width: 95%;
   margin: 20px;
-  
+
   border: 10px solid rgba(63, 179, 157, 1);
   border-radius: 10px;
   box-shadow: 10px 0 10px rgba(0, 0, 0, 0.2);

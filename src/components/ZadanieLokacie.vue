@@ -22,7 +22,9 @@
 
       <label class="popisek">
         Datum nalezu:
-        <input type="date" v-model="datum" class="policko" />
+        <input type="date" :value="datum && datum.toISOString().split('T')[0]"
+                   @input="datum = $event.target.valueAsDate" class="policko">
+       
       </label>
 
       <button @click="ulozitKliste">Ulozit kliste</button>
@@ -39,7 +41,7 @@ export default {
     return {
       prenasec: " ",
       message: "",
-      datum: "2.3.2019"
+      datum: new Date(),
     };
   },
   methods: {
