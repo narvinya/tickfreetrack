@@ -79,7 +79,6 @@ export default {
   methods: {
     zobrazInfo() {
       this.zobrazeneInfo = true;
-      console.log("fungujem");
     }
   }
 };

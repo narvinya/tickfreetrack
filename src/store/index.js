@@ -29,7 +29,6 @@ export default new Vuex.Store({
   },
   mutations: {
     ulozitKliste(state, payload) {
-      console.log('neco z mutace')
       state.klistata.push(payload);
     }
   },

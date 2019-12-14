@@ -116,7 +116,6 @@ export default {
       navigator.geolocation.getCurrentPosition(this.success, this.onError);
     },
     ulozitKliste() {
-      console.log("neco");
       this.$store.commit("ulozitKliste", {
         coordinates: latLng(this.center),
         note: this.message,
@@ -129,15 +128,12 @@ export default {
       this.hlaska = 'Nový kliešť bol úspešne pridaný'
     },
     newLocation(x){
-      console.log(x);
       this.center = latLng(x);
     },
   },
   mounted() {
     if ("geolocation" in navigator) {
-      console.log("geolokace je k dispozici MapaNoveKliste.vue");
     } else {
-      console.log("geolocation IS NOT available");
       return;
     }
     setTimeout(this.location, 8000);
