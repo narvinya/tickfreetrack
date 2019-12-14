@@ -4,24 +4,23 @@
     <h1>Pridať nový výskyt kliešťa</h1>
     <menicko />
     <div id="obalka">
-      <div class="mapa"> <!-- mapa -->
+      <div class="mapa">
+        <!-- mapa -->
         <div>
-          <div class="ramecekMapa"> <!--ramecekMapa-->
-            <l-map :zoom="zoom" :center="center" class="">
+          <div class="ramecekMapa">
+            <!--ramecekMapa-->
+            <l-map :zoom="zoom" :center="center" class @update:center="newLocation">
               <l-tile-layer :url="url" :attribution="attribution" />
 
-              <l-marker :lat-lng="center">
-               
-              </l-marker>
+              <l-marker :lat-lng="center"></l-marker>
             </l-map>
           </div>
         </div>
       </div>
 
       <div class="formular">
-        
         <div>
-          <p class="hlaska"> {{hlaska}} </p>
+          <p class="hlaska">{{hlaska}}</p>
           <h2>Zadat novy vyskyt klistete</h2>
           <div class="formular1">
             <label class="popisek">
@@ -51,11 +50,10 @@
                 class="policko"
               />
             </label>
-            
+
             <button @click="ulozitKliste" class="pridatButton">Ulozit kliste</button>
           </div>
         </div>
-       
       </div>
     </div>
   </div>
@@ -124,7 +122,11 @@ export default {
       this.message = "";
       this.datum = new Date();
       this.hlaska = 'Nové klíště bylo úspšně přidáno'
-    }
+    },
+    newLocation(x){
+      console.log(x);
+      this.center = latLng(x);
+    },
   },
   mounted() {
     if ("geolocation" in navigator) {
@@ -135,7 +137,7 @@ export default {
     }
     setTimeout(this.location, 8000);
   }
-};
+}
 </script>
 
 <style scoped>
@@ -167,14 +169,11 @@ export default {
   box-shadow: 10px 0 10px rgba(0, 0, 0, 0.2);
 }
 .mapa {
-  
-  
   height: 460px;
   width: 95%;
   margin: 20px;
-
 }
-.mapanew{
+.mapanew {
   height: 600px;
 }
 .policko {
@@ -197,30 +196,29 @@ export default {
   justify-content: space-between;
   max-width: 50%;
 }
-.hlaska{
+.hlaska {
   color: red;
   padding: 10px;
 }
 .pridatButton {
-    
-    bottom: 30px;
-   
-    /*display: inline-block;
+  bottom: 30px;
+
+  /*display: inline-block;
     text-align: center;*/
-    padding: 12px 80px 12px 80px;
-    border-radius: 100px;
-    background:white;
-    font: bold 25px "Arvo", serif;
-    color: rgba(63, 179, 157, 1);
-    text-decoration: none;
-    text-transform: uppercase;
-    border:0;
+  padding: 12px 80px 12px 80px;
+  border-radius: 100px;
+  background: white;
+  font: bold 25px "Arvo", serif;
+  color: rgba(63, 179, 157, 1);
+  text-decoration: none;
+  text-transform: uppercase;
+  border: 0;
 }
 .pridatButton:hover {
-    background: #720000;
-    background: -moz-linear-gradient(top, #720000, #460000);
-    background: linear-gradient(to bottom, #720000, #460000);
-    color: #ffffff;
-    text-decoration: none;
+  background: #720000;
+  background: -moz-linear-gradient(top, #720000, #460000);
+  background: linear-gradient(to bottom, #720000, #460000);
+  color: #ffffff;
+  text-decoration: none;
 }
 </style>
