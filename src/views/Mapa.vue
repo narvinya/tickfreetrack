@@ -1,5 +1,10 @@
 <template>
+
   <div class="PozadieLes">
+     <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <div>
       <Ikona />
       <Nadpis />
@@ -29,8 +34,9 @@
         <option value="2018">2018</option>
         <option value="2019">2019</option>
       </select>
-
-      <button @click="vymazatFiltr" class="filtrMapa">VYMAZAT FILTR</button>
+    
+      <button @click="vymazatFiltr" class="filtrMapa mapaButtonReset" ><i class="fa fa-fw fa-refresh"></i><span class="buttonResetText">VYMAZAŤ FILTER</span></button>
+      
 
       <l-map :zoom="zoom" :center="center" class="mapa">
         <l-tile-layer :url="url" :attribution="attribution" />
@@ -42,9 +48,11 @@
         >
           <l-popup class="popisekKlistete">
             <div>
-              <p v-show="showParagraph">{{kliste.note}}</p>
-              <p v-show="showParagraph">{{ kliste.datum.toLocaleDateString() }}</p>
-              <button>Editovat kliste</button>
+              <p v-show="showParagraph">Komentár: {{kliste.note}}</p>
+              <p v-show="showParagraph">Kliešť bol nájdený na: {{kliste.prenasec}}</p>
+              <p v-show="showParagraph">Dátum pridania: {{ kliste.datum.toLocaleDateString() }}</p>
+              
+              <!-- <button>Editovat kliste</button> -->
             </div>
           </l-popup>
         </l-marker>
@@ -55,7 +63,6 @@
 
 <script>
 import Ikona from "@/components/Ikona.vue";
-//import MapaObrazok from "@/components/MapaObrazok.vue";
 import Menu from "@/components/Menu.vue";
 import Nadpis from "@/components/Nadpis.vue";
 import ButtonPridat from "@/components/ButtonPridat.vue";
@@ -135,9 +142,10 @@ export default {
 }
 .mapa {
   position: absolute;
+  z-index:0;
   top: 120px;
   height: 550px;
-  width: 95%;
+  width: 93%;
   margin: 0 20px 0 0;
   padding: 10px;
   border: 10px solid rgba(63, 179, 157, 1);
@@ -150,7 +158,7 @@ export default {
 .nazevKlistete {
   font-weight: bold;
 }
-.filtrMapa{
+.filtrMapa {
   border: 1px solid rgba(63, 179, 157, 1);
   padding: 10px;
   margin: 5px;
@@ -161,9 +169,31 @@ export default {
   
 }
 
+.mapaButtonReset {
+  background-color:white;
+}
+
+.buttonResetText {
+  display:inline-block;
+}
+
 @media(max-width:599px) {
   .mapa {
-    
+    top:20px;
   }
+
+  .filtrMapa {
+top:25px;
+left:65px;
+  }
+
+.buttonResetText {
+  display:none;
+}
+
+.mapa {
+  border:none;
+}
+
 }
 </style>

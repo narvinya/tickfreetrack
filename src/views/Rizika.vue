@@ -62,7 +62,7 @@ export default {
         {nazov:"Anaplazmóza",
         latinsky:"Anaplasma phagocytophilum",
         obrazok: "",
-        popis:"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum ad, rem doloribus pariatur quis quas itaque ullam odit autem veritatis. Nam, earum. Fugit modi rerum facilis voluptates tenetur officia deserunt repellendus, consequuntur iste praesentium repellat, quidem quas delectus, dicta quisquam"
+        popis:"Anaplazmóza je infekcia prenášaná kliešťami Ixodes, pôvodcom ochorenia je baktéria Anaplasma phagocytophilum. Jednotlivci sú najviac ohrození v čase aktivity kliešťov, od jari do jesene. Inkubačná doba je v rozmedzí 5 - 21 dní, väčšina ochorení sa vyskytuje v období apríl-október. Klinickým prejavom je zvyčajne akútne nešpecifické ochorenie trvajúci 2 - 11 dní. U 70-95% infikovaných osôb je prítomná horúčka (> 38,5 ° C), malátnosť, myalgia a bolesti hlavy, niekedy tiež artralgia, postihnutie pečene (zvýšené pečeňové transaminázy), poruchy centrálneho nervového systému (zmätenosť, neurologické príznaky), gastrointestinálneho systému (nevoľnosť a vracanie) alebo respiračné symptómy (dýchacie ťažkosti). U menšiny pacientov sa môže objaviť vyrážka. Ochorenie môže prebehnúť aj bez klinických príznakov. V prípade, že je ochorenie sprevádzané vyrážkou, by mala byť anaplazmóza zahrnutá do diferenciálnej diagnostiky infekcií prenášaných kliešťami."
         },
         {
           nazov: "Babezióza",
@@ -74,7 +74,7 @@ export default {
           nazov: "Bartonellosis",
           latinsky: "Bartonella henselae",
           obrazok: "",
-          obrazok: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum ad, rem doloribus pariatur quis quas itaque ullam odit autem veritatis. Nam, earum. Fugit modi rerum facilis voluptates tenetur officia deserunt repellendus, consequuntur iste praesentium repellat, quidem quas delectus, dicta quisquam",
+          popis: "Bartonella henselae, ako jeden z druhov bartonel, spôsobuje chorobu z mačacieho škrabnutia. Z údajov zverejnených Centrom kontroly a prevenciou chorôb v Atlante vyplýva, že Bartonella henselae bola objavená v roku 1992 . Hlavným rezervoárom sú kliešť rodu Ixodes ricinus a mačky, baktérie sú na tieto zvieratá prenášané mačacími blchami. Za možný je považovaný aj prenos pri saní blchy alebo kliešťa. Po 1-7 týždňoch dochádza k zdureniu regionálne lymfatické uzliny. K systémovým príznakom patria bolesti hlavy, subfebrílie, slabosť, malátnosť, závraty, únava, bolesť kĺbov, svalov, chrbta a očí. Diagnóza je stanovovaná sérologickým preukazom špecifických protilátok IgM a IgG metódou nepriamej imunofluorescencie.",
         },
         {
           nazov: "Bourbon Virus",
@@ -139,6 +139,7 @@ export default {
   font-size:16px;
   padding:0 10px;
   cursor:pointer;
+  border-radius:20px;
 }
 
 .zoznamPatogen li {
