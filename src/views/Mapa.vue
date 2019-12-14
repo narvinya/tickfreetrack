@@ -74,7 +74,6 @@ export default {
   components: {
     Ikona: Ikona,
     Nadpis: Nadpis,
-    //MapaObrazok: MapaObrazok,
     Menu: Menu,
     LMap,
     LTileLayer,
