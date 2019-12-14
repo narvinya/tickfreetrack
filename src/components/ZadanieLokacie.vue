@@ -6,41 +6,56 @@
         Kdo kliste prenasel:
         <input type="text" v-model="prenasec" class="policko" />
       </label>
-     
+
       <label class="popisek">
         Popis vyskytu:
         <textarea
           class="policko"
           v-model="message"
-          maxlength="880"  cols="45" rows="6" wrap="hard"
+          maxlength="880"
+          cols="45"
+          rows="6"
+          wrap="hard"
           placeholder="vlozte poznamku, pokud by mohla byt uzitecna pro dalsi uzivatele. dekujeme"
         ></textarea>
-
-        
-
       </label>
-      
-      <label class="popisek">Datum nalezu:
+
+      <label class="popisek">
+        Datum nalezu:
         <input type="date" v-model="datum" class="policko" />
       </label>
-      
+
+      <button @click="ulozitKliste">Ulozit kliste</button>
     </div>
   </div>
 </template>
 
 <script>
-
+import { latLng } from "leaflet";
 
 export default {
-  components:{
-    
-  },
+  components: {},
   data() {
     return {
       prenasec: " ",
       message: "",
       datum: "2.3.2019"
     };
+  },
+  methods: {
+    ulozitKliste() {
+      console.log("neco")
+      this.$store.commit("ulozitKliste", {
+        coordinates: latLng(49.185775, 16.625585),
+        note: this.message,
+        prenasec: this.prenasec,
+        datum: this.datum
+      }
+      );
+      this.prenasec = "";
+      this.message= "";
+      this.datum = "";
+    }
   }
 };
 </script>

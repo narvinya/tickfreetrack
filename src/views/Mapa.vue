@@ -8,33 +8,22 @@
       <Menu />
       <buttonPridat/>
     </div>
- 
+
     <div class="ramecekMapa">
+
       <l-map :zoom="zoom" :center="center" class="mapa">
         <l-tile-layer :url="url" :attribution="attribution" />
         
-        <l-marker v-for="(kliste, index) in klistata" v-bind:key="index " :lat-lng="withIcon">
+        <l-marker v-for="kliste in klistata" v-bind:key="kliste.note " :lat-lng="kliste.coordinates">
           <l-popup class="popisekKlistete">
             <div >
-              <strong>Kliste 1</strong>
-              <p v-show="showParagraph">Toto kliste bylo obzvlast neprijemne</p>
+            
+              <p v-show="showParagraph">{{kliste.note}}</p>
+              <p v-show="showParagraph">{{ kliste.datum.toLocaleDateString() }}</p>
               <button>Editovat kliste</button>
             </div>
           </l-popup>
         </l-marker>
-
-     
-       <l-marker :lat-lng="kliste2">
-         <!--  <l-icon
-          icon-url="public/images/Map-Marker-icon-green.png"
-          /> -->
-          <l-popup>
-            <div>
-              Custom icon
-              <p v-show="showParagraph">Tady bude popis klistete</p>
-            </div>
-          </l-popup>
-        </l-marker> 
 
       </l-map>
     </div>
@@ -80,25 +69,13 @@ export default {
       attribution:
         '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors',
 
-      klistata: [
-        {
-          lat: 49.206807,
-          lng: 16.607908
-        },
-        {
-          lat: 49.211577,
-          lng: 16.710495
-        },
-        {
-          lat: 49.215666,
-          lng: 16.710495
-        }
-      ],
-      withPopup: latLng(49.206807, 16.607908),
-      kliste2: latLng(49.211577, 16.710495),
-      withIcon: latLng(49.215666, 16.710495),
       showParagraph: true
     };
+  },
+  computed: {
+    klistata () {
+      return this.$store.state.klistata
+    }
   }
 };
 </script>
