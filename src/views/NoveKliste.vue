@@ -25,7 +25,7 @@
               Kto kliešťa prenášal:
               <span>(človek, pes, ...)</span>
               <br>
-              <input type="radio" id="one" value="človek" v-model="prenasec" selected />
+              <input type="radio" id="one" value="človek" v-model="prenasec" />
               <label class="radLabel" for="one">Človek</label>
               
               <input type="radio" id="two" value="pes" v-model="prenasec" />
