@@ -20,7 +20,10 @@
         <div class="nazovPatogen">{{vybranyPatogen.nazov}}</div>
         <div class="latinskyPatogen">{{vybranyPatogen.latinsky}}</div>
         <div class="popisPatogen">{{vybranyPatogen.popis}}</div>
-        <div class="popisPatogen">{{vybranyPatogen.obrazok}}</div>
+        <div class="patogenWrap">
+        <img :src="vybranyPatogen.obrazok" class="obrazokPatogen" />
+        </div>
+
         
         </div>
       </div>
@@ -65,7 +68,7 @@ export default {
         {
           nazov: "Babezióza",
           latinsky: "Babesia microti",
-          obrazok: "wikipedia.org/wiki/Babesia#/media/File:Babiesa_spp.jpg",
+          obrazok: "https://upload.wikimedia.org/wikipedia/commons/5/52/Babiesa_spp.jpg",
           popis: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum ad, rem doloribus pariatur quis quas itaque ullam odit autem veritatis. Nam, earum. Fugit modi rerum facilis voluptates tenetur officia deserunt repellendus, consequuntur iste praesentium repellat, quidem quas delectus, dicta quisquam"
         },
         {
@@ -122,6 +125,8 @@ export default {
   padding: 15px 15px 0px 15px;
   font-size: 15px;
   font-family: "Roboto Slab", serif;
+  
+ 
 }
 
 .patogen {
@@ -134,6 +139,7 @@ export default {
   color:white;
   font-size:16px;
   padding:0 10px;
+  cursor:pointer;
 }
 
 .zoznamPatogen li {
@@ -149,21 +155,33 @@ export default {
   border: solid 2px rgba(63, 179, 157, 1);
   border-radius: 20px;
   padding: 10px;
+  background:white;
 }
 
 .nazovPatogen {
   font-size:17px;
-  text-align:center;
+ 
 }
 
 
 
 .latinskyPatogen {
-  text-align:center;
+  
   font-style: italic;
 }
 
+.obrazokPatogen {
+  max-width:50%;
+  border: solid 2px  rgba(63, 179, 157, 1);
+  border-radius: 20px;
+}
 
+.patogenWrap {
+  display:flex;
+  flex:1;
+
+margin-top:10px;
+}
 
 
 
@@ -172,5 +190,11 @@ export default {
     font-size: 15px;
     text-align: left;
   }
+}
+  @media (min-width: 1000px) {
+ .obrazokPatogen {
+  max-width:30%;
+ 
+}
 }
 </style>
