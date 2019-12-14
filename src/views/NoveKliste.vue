@@ -11,13 +11,7 @@
               <l-tile-layer :url="url" :attribution="attribution" />
 
               <l-marker :lat-lng="center">
-                <l-popup class="popisekKlistete">
-                  <div>
-                    <strong>Nove kliste</strong>
-                    <p v-show="showParagraph">Toto kliste bylo obzvlast neprijemne</p>
-                    <button>Editovat kliste</button>
-                  </div>
-                </l-popup>
+               
               </l-marker>
             </l-map>
           </div>
@@ -27,6 +21,7 @@
       <div class="formular">
         
         <div>
+          <p class="hlaska"> {{hlaska}} </p>
           <h2>Zadat novy vyskyt klistete</h2>
           <div class="formular1">
             <label class="popisek">
@@ -56,11 +51,11 @@
                 class="policko"
               />
             </label>
-
-            <button @click="ulozitKliste">Ulozit kliste</button>
+            
+            <button @click="ulozitKliste" class="pridatButton">Ulozit kliste</button>
           </div>
         </div>
-        <ulozit />
+       
       </div>
     </div>
   </div>
@@ -69,7 +64,6 @@
 
 <script>
 import Menu from "../components/Menu.vue";
-import Ulozit from "@/components/Ulozit.vue";
 import Ikona from "@/components/Ikona.vue";
 
 import { latLng } from "leaflet";
@@ -85,7 +79,6 @@ import {
 export default {
   components: {
     menicko: Menu,
-    ulozit: Ulozit,
     ikona: Ikona,
     LMap,
     LTileLayer,
@@ -105,7 +98,8 @@ export default {
       showParagraph: true,
       prenasec: " ",
       message: "",
-      datum: new Date()
+      datum: new Date(),
+      hlaska: ''
     };
   },
   methods: {
@@ -124,11 +118,12 @@ export default {
         coordinates: latLng(this.center),
         note: this.message,
         prenasec: this.prenasec,
-        datum: this.datum
+        datum: this.datum,
       });
       this.prenasec = "";
       this.message = "";
       this.datum = new Date();
+      this.hlaska = 'Nové klíště bylo úspšně přidáno'
     }
   },
   mounted() {
@@ -201,5 +196,31 @@ export default {
   flex-wrap: wrap;
   justify-content: space-between;
   max-width: 50%;
+}
+.hlaska{
+  color: red;
+  padding: 10px;
+}
+.pridatButton {
+    
+    bottom: 30px;
+   
+    /*display: inline-block;
+    text-align: center;*/
+    padding: 12px 80px 12px 80px;
+    border-radius: 100px;
+    background:white;
+    font: bold 25px "Arvo", serif;
+    color: rgba(63, 179, 157, 1);
+    text-decoration: none;
+    text-transform: uppercase;
+    border:0;
+}
+.pridatButton:hover {
+    background: #720000;
+    background: -moz-linear-gradient(top, #720000, #460000);
+    background: linear-gradient(to bottom, #720000, #460000);
+    color: #ffffff;
+    text-decoration: none;
 }
 </style>

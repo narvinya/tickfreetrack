@@ -61,7 +61,7 @@
           </router-link>
         </li>
         <li class="lokacia">
-          <router-link class="routerLink" to="/lokacia">
+          <router-link class="routerLink" to="/novekliste">
             <i class="fa fa-fw fa-crosshairs"></i> Pridať kliešťa
           </router-link>
         </li>
