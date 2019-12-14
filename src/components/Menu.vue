@@ -28,22 +28,28 @@
             <i class="fa fa-fw fa-caret-down"></i>
           </div>
           <ul class="dropdown-content" v-show="zobrazeneInfo">
-            <li>
+            <li class="submenuItem">
               <router-link class="routerLink routerLink--sub" to="/prevencia">Prevencia</router-link>
             </li>
-            <li>
-              <router-link class="routerLink routerLink--sub" to="/odstranenie">Ako správne odstrániť kliešťa</router-link>
+            <li class="submenuItem">
+              <router-link
+                class="routerLink routerLink--sub"
+                to="/odstranenie"
+              >Ako správne odstrániť kliešťa</router-link>
             </li>
-            <li>
-              <router-link class="routerLink routerLink--sub" to="/testovanie">Možnosti testovania kliešťa</router-link>
+            <li class="submenuItem">
+              <router-link
+                class="routerLink routerLink--sub"
+                to="/testovanie"
+              >Možnosti testovania kliešťa</router-link>
             </li>
-            <li>
+            <li class="submenuItem">
               <router-link class="routerLink routerLink--sub" to="/rizika">Riziká</router-link>
             </li>
-            <li>
+            <li class="submenuItem">
               <router-link class="routerLink routerLink--sub" to="/priznaky">Príznaky pri nákaze</router-link>
             </li>
-            <li>
+            <li class="submenuItem">
               <router-link class="routerLink routerLink--sub" to="/pomoc">Prvá pomoc</router-link>
             </li>
           </ul>
@@ -67,13 +73,13 @@
 export default {
   data: function() {
     return {
-      zobrazeneInfo:false
+      zobrazeneInfo: false
     };
   },
   methods: {
     zobrazInfo() {
-      this.zobrazeneInfo = true
-      console.log("fungujem")
+      this.zobrazeneInfo = true;
+      console.log("fungujem");
     }
   }
 };
@@ -139,8 +145,7 @@ export default {
   .dropdown-content {
     position: absolute;
     font-size: 12px;
-        background-color: rgba(63, 179, 157, 1);
-
+    background-color: rgba(63, 179, 157, 1);
   }
 
   .routerLink {
@@ -166,7 +171,7 @@ export default {
 
   .cssmenu {
     font-family: "Arvo", serif;
-    font-size: 15px;
+    font-size: 13px;
     line-height: 1em;
     border-radius: 2px;
     overflow: hidden;
@@ -183,11 +188,11 @@ export default {
     background-color: rgba(63, 179, 157, 1);
   }
 
-  .cssmenu ul li:first-child {
+  .cssmenu ul li:first-child:not(.submenuItem) {
     border-radius: 100px 0 0 100px;
   }
 
-  .cssmenu ul li:last-child {
+  .cssmenu ul li:last-child:not(.submenuItem) {
     border-radius: 0 100px 100px 0;
   }
 
@@ -204,11 +209,11 @@ export default {
     display: none;
   }
 
-  .informacie ul li,
+  /* .informacie ul li,
   .informacie ul li:last-child,
   .informacie ul li:first-child {
     border-radius: 50px;
-  }
+  } */
 
   .informacie ul li a:before {
     display: none;
@@ -229,7 +234,7 @@ export default {
     position: absolute;
     left: 100%;
     top: 0;
-    width: 30px;
+    width: 20px;
     height: 100%;
     background-color: rgba(63, 179, 157, 1);
     border-radius: 0 100px 100px 0;
@@ -252,16 +257,20 @@ export default {
 
   .routerLink {
     margin-left: 0;
-    padding: 10px 10px 10px 40px;
+    padding: 10px 5px 10px 25px;
   }
 
   .routerLink--sub {
-    padding:10px 20px;
+    padding: 10px 20px;
   }
 
   .informacie:hover .dropdown-content {
     display: block;
   }
+.routerLink {
+    text-transform: uppercase !important;
+  }
+
 }
 
 @media (min-width: 1000px) {
@@ -278,7 +287,7 @@ export default {
   }
 
   .routerLink--sub {
-    text-transform:none !important;
+    text-transform: none !important;
   }
 
   .dropdown-content {
