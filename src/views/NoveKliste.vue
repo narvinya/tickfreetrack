@@ -4,13 +4,62 @@
     <h1>Pridať nový výskyt kliešťa</h1>
     <menicko />
     <div id="obalka">
-      <div class="mapa">
-        <mapa />
+      <div class="mapa"> <!-- mapa -->
+        <div>
+          <div class="ramecekMapa"> <!--ramecekMapa-->
+            <l-map :zoom="zoom" :center="center" class="">
+              <l-tile-layer :url="url" :attribution="attribution" />
+
+              <l-marker :lat-lng="center">
+                <l-popup class="popisekKlistete">
+                  <div>
+                    <strong>Nove kliste</strong>
+                    <p v-show="showParagraph">Toto kliste bylo obzvlast neprijemne</p>
+                    <button>Editovat kliste</button>
+                  </div>
+                </l-popup>
+              </l-marker>
+            </l-map>
+          </div>
+        </div>
       </div>
 
       <div class="formular">
-        Souradnice: {{lat}}, {{lng}}
-        <noveKliste />
+        
+        <div>
+          <h2>Zadat novy vyskyt klistete</h2>
+          <div class="formular1">
+            <label class="popisek">
+              Kdo kliste prenasel:
+              <input type="text" v-model="prenasec" class="policko" />
+            </label>
+
+            <label class="popisek">
+              Popis vyskytu:
+              <textarea
+                class="policko"
+                v-model="message"
+                maxlength="880"
+                cols="45"
+                rows="6"
+                wrap="hard"
+                placeholder="vlozte poznamku, pokud by mohla byt uzitecna pro dalsi uzivatele. dekujeme"
+              ></textarea>
+            </label>
+
+            <label class="popisek">
+              Datum nalezu:
+              <input
+                type="date"
+                :value="datum && datum.toISOString().split('T')[0]"
+                @input="datum = $event.target.valueAsDate"
+                class="policko"
+              />
+            </label>
+
+            <button @click="ulozitKliste">Ulozit kliste</button>
+          </div>
+        </div>
         <ulozit />
       </div>
     </div>
@@ -20,64 +69,76 @@
 
 <script>
 import Menu from "../components/Menu.vue";
-import ZadanieLokacie from "@/components/ZadanieLokacie.vue";
 import Ulozit from "@/components/Ulozit.vue";
-import MapaNoveKliste from "@/components/MapaNoveKliste.vue";
 import Ikona from "@/components/Ikona.vue";
 
-if ("geolocation" in navigator) {
-  console.log("geolokace je k dispozici");
-} else {
-  console.log("geolocation IS NOT available");
-}
-function geoFindMe() {
-  function success(position) {
-    const latitude = position.coords.latitude;
-    const longitude = position.coords.longitude;
-
-    status.textContent = "";
-    mapLink.href = `https://www.openstreetmap.org/#map=18/${latitude}/${longitude}`;
-    mapLink.textContent = `Latitude: ${latitude} °, Longitude: ${longitude} °`;
-  }
-
-  function error() {
-    status.textContent = "Unable to retrieve your location";
-  }
-
-  if (!navigator.geolocation) {
-    status.textContent = "Geolocation is not supported by your browser";
-  } else {
-    status.textContent = "Locating…";
-    navigator.geolocation.getCurrentPosition(success, error);
-  }
-}
+import { latLng } from "leaflet";
+import {
+  LMap,
+  LTileLayer,
+  LMarker,
+  LPopup,
+  LTooltip,
+  LIcon
+} from "vue2-leaflet";
 
 export default {
   components: {
-    noveKliste: ZadanieLokacie,
     menicko: Menu,
     ulozit: Ulozit,
-    mapa: MapaNoveKliste,
     ikona: Ikona,
+    LMap,
+    LTileLayer,
+    LMarker,
+    LPopup,
+    LTooltip,
+    LIcon
   },
-  props: {
-    prenasec: String,
-    message: String
-  },
+
   data() {
     return {
-      lat: "",
-      lng: ""
+      zoom: 12,
+      center: latLng(49.2107581, 16.618815),
+      url: "http://{s}.tile.osm.org/{z}/{x}/{y}.png",
+      attribution:
+        '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors',
+      showParagraph: true,
+      prenasec: " ",
+      message: "",
+      datum: new Date()
     };
   },
-  computed: {
-    ziskatLokaci() {
-      navigator.geolocation.getCurrentPosition(function(position) {
-        console.log(position.coords.latitude, position.coords.longitude);
+  methods: {
+    success(position) {
+      const latitude = position.coords.latitude;
+      const longitude = position.coords.longitude;
+      this.center = latLng(latitude, longitude);
+    },
+    onError() {},
+    location() {
+      navigator.geolocation.getCurrentPosition(this.success, this.onError);
+    },
+    ulozitKliste() {
+      console.log("neco");
+      this.$store.commit("ulozitKliste", {
+        coordinates: latLng(this.center),
+        note: this.message,
+        prenasec: this.prenasec,
+        datum: this.datum
       });
-      this.lat = position.coords.latitude;
-      this.lng = position.coords.longitude;
+      this.prenasec = "";
+      this.message = "";
+      this.datum = new Date();
     }
+  },
+  mounted() {
+    if ("geolocation" in navigator) {
+      console.log("geolokace je k dispozici MapaNoveKliste.vue");
+    } else {
+      console.log("geolocation IS NOT available");
+      return;
+    }
+    setTimeout(this.location, 8000);
   }
 };
 </script>
@@ -97,12 +158,48 @@ export default {
   text-align: center;
   color: rgb(24, 54, 54);
   left: 50%;
-  top:20%;
+  top: 20%;
 }
-
-.mapa {
+.ramecekMapa {
   position: absolute;
-  left: 0%;
- 
+  top: 120px;
+  height: 460px;
+  width: 600px;
+  margin: 100px 0px;
+  padding: 0;
+  border: 10px solid rgba(63, 179, 157, 1);
+  border-radius: 10px;
+  box-shadow: 10px 0 10px rgba(0, 0, 0, 0.2);
+}
+.mapa {
+  
+  
+  height: 460px;
+  width: 95%;
+  margin: 20px;
+
+}
+.mapanew{
+  height: 600px;
+}
+.policko {
+  padding: 10px 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  font-family: "Arvo", serif;
+  font-size: 18px;
+}
+.popisek {
+  margin: 0;
+  padding: 10px 20px;
+  font-family: "Arvo", serif;
+  font-size: 18px;
+  color: rgb(24, 54, 54);
+}
+.formular1 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 50%;
 }
 </style>
