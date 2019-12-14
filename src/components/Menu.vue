@@ -78,7 +78,7 @@ export default {
   },
   methods: {
     zobrazInfo() {
-      this.zobrazeneInfo = true;
+      this.zobrazeneInfo = !this.zobrazeneInfo;
     }
   }
 };
@@ -102,6 +102,7 @@ export default {
     top: 60px;
     width: 100%;
     background-color: rgba(63, 179, 157, 1);
+    z-index:9000;
   }
 
   .domovMobil {
@@ -280,7 +281,7 @@ export default {
 
 }
 
-@media (min-width: 700px) {
+@media (min-width: 1000px) {
   .cssmenu {
     font-size: 16px;
   }

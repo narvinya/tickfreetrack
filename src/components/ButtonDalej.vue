@@ -1,6 +1,6 @@
 <template>
 
-  <router-link to="/lokacia" class="buttonDalej">Ďalej</router-link>
+  <router-link to="/novekliste" class="buttonDalej">Ďalej</router-link>
  
 </template>
 

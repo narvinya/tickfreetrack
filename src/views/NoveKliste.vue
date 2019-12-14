@@ -1,5 +1,5 @@
 <template>
-  <div class="PozadieLes">
+  <div class="PozadieLesSmall">
     <ikona />
     <h1>Pridať nový výskyt</h1>
     <menicko />
@@ -15,6 +15,7 @@
               <l-marker :lat-lng="center"></l-marker>
             </l-map>
           </div>
+         
         </div>
       </div>
       
@@ -54,21 +55,24 @@
               />
             </label>
             <div class="buttonWrap">
-            <button @click="ulozitKliste" class="pridatButton">Uložiť</button>
+            <button @click="ulozitKliste"    class="pridatButton">Uložiť</button>
+             <ButtonDalej v-show="hlaska"/>
             </div>
             
         </div>
+       
       </div>
+    
       </div>
+     
     </div>
- 
 </template>
 
 
 <script>
 import Menu from "../components/Menu.vue";
 import Ikona from "@/components/Ikona.vue";
-
+import ButtonDalej from "@/components/ButtonDalej.vue";
 import { latLng } from "leaflet";
 import {
   LMap,
@@ -83,6 +87,7 @@ export default {
   components: {
     menicko: Menu,
     ikona: Ikona,
+    ButtonDalej: ButtonDalej,
     LMap,
     LTileLayer,
     LMarker,
