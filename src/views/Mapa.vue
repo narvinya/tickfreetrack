@@ -15,18 +15,18 @@
     <div class="ramecekMapa">
 
       <select name="mesice" v-model="mesic" class="filtrMapa">
-        <option value="1">leden</option>
-        <option value="2">unor</option>
-        <option value="3">brezen</option>
-        <option value="4">duben</option>
-        <option value="5" >kveten</option>
-        <option value="6">cerven</option>
-        <option value="7">cervenec</option>
-        <option value="8">srpen</option>
-        <option value="9">zari</option>
-        <option value="10">rijen</option>
-        <option value="11">listopad</option>
-        <option value="12" >prosinec</option>
+        <option value="1">január</option>
+        <option value="2">február</option>
+        <option value="3">marec</option>
+        <option value="4">apríl<label for=""></label></option>
+        <option value="5">máj</option>
+        <option value="6">jún</option>
+        <option value="7">júl</option>
+        <option value="8">august</option>
+        <option value="9">september</option>
+        <option value="10">október</option>
+        <option value="11">november</option>
+        <option value="12" >december</option>
       </select> 
 
       <select name="roky" v-model="rok" class="filtrMapa">
@@ -38,7 +38,7 @@
       <select name="prenasec" v-model="prenasec" class="filtrMapa">
         <option value="človek">človek</option>
         <option value="pes">pes</option>
-        <option value="jiny">jiné</option>
+        <option value="jiny">iné</option>
       </select>
     <div>
       <button @click="vymazatFiltr" class="filtrMapa mapaButtonReset" ><i class="fa fa-fw fa-refresh"></i><span class="buttonResetText">VYMAZAŤ FILTER</span></button>

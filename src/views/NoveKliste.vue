@@ -32,7 +32,7 @@
               <label class="radLabel" for="two">Pes</label>
              
               <input type="radio" id="three" value="jiny" v-model="prenasec" />
-              <label class="radLabel" for="three">Jiný</label>
+              <label class="radLabel" for="three">Iné</label>
             </label>
           </div>
           <label class="popisek">
