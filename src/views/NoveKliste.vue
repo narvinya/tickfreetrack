@@ -26,7 +26,7 @@
               <span>(človek, pes, ...)</span>
               <br>
               <input type="radio" id="one" value="človek" v-model="prenasec" />
-              <label class="radLabel" for="one">Človek</label>
+              <label class="radLabel" for="">Človek</label>
               
               <input type="radio" id="two" value="pes" v-model="prenasec" />
               <label class="radLabel" for="two">Pes</label>

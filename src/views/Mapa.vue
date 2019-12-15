@@ -34,6 +34,12 @@
         <option value="2018">2018</option>
         <option value="2019">2019</option>
       </select>
+
+      <select name="prenasec" v-model="prenasec" class="filtrMapa">
+        <option value="človek">človek</option>
+        <option value="pes">pes</option>
+        <option value="jiny">jiné</option>
+      </select>
     
       <button @click="vymazatFiltr" class="filtrMapa mapaButtonReset" ><i class="fa fa-fw fa-refresh"></i><span class="buttonResetText">VYMAZAŤ FILTER</span></button>
       
@@ -101,12 +107,14 @@ export default {
       showParagraph: true,
       mesic: '',
       rok: '',
+      prenasec: '',
     };
   },
   methods:{
     vymazatFiltr(){
       this.mesic= '';
       this.rok= '';
+      this.prenasec = '';
     }
     },
   computed: {
@@ -117,6 +125,9 @@ export default {
       }
       if (this.rok) {
         klistata = klistata.filter((kliste) => kliste.datum.getFullYear() === Number(this.rok))
+      }
+      if (this.prenasec) {
+        klistata = klistata.filter((kliste) => kliste.prenasec === this.prenasec)
       }
 
       return klistata
