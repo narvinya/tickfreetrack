@@ -8,7 +8,7 @@
       <div class="textRizika">
         <p>Kliešte môžu byť nositeľmi patogénov spôsobujúcich ochorenia ľudí, ako sú:</p>
         <p>Kliknite nižšie pre výber a zobrazenie informácii.</p>
-
+<div>
         <ul class="zoznamPatogen">
           <li
             v-on:click="vyberPatogen(patogen)"
@@ -17,10 +17,13 @@
             v-bind:key="patogen.nazov"
           >{{patogen.nazov}}</li>
         </ul>
+        </div>
+        <div>
         <div class="detailPatogen" v-show="vybranyPatogen.nazov.length">
           <div class="nazovPatogen">{{vybranyPatogen.nazov}}</div>
           <div class="latinskyPatogen">{{vybranyPatogen.latinsky}}</div>
           <div class="popisPatogen">{{vybranyPatogen.popis}}</div>
+          </div>
         </div>
       </div>
     </div>
@@ -191,6 +194,14 @@ export default {
 @media (min-width: 1000px) {
   .obrazokPatogen {
     max-width: 30%;
+  }
+}
+
+@media(max-width:599px) {
+  .detailPatogen {
+    
+    float:none;
+  
   }
 }
 </style>
