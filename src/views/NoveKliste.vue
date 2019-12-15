@@ -152,15 +152,18 @@ export default {
 
 }
 .formular {
+  top: 120px;
+  height: 490px;
   background-image: linear-gradient(#f8ce82, #f4af6a);
   background-size: cover;
   background-position: center;
-  margin: 45px 10px 30px 30px;
+  margin: 70px 10px 30px 30px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
   border-radius: 10px;
   font-size: 25px;
   color: rgb(24, 54, 54);
   padding: 0 30px 15px 30px;
+  
 }
 .ramecekMapa {
   top: 120px;
@@ -195,6 +198,7 @@ export default {
 .hlaska {
   color: rgba(63, 179, 157, 1);
   padding-top: 10px;
+  font-size: 16px;
 }
 
 .nadpisH3 {

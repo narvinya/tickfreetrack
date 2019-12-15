@@ -22,7 +22,7 @@ export default new Vuex.Store({
       {
         coordinates: latLng(49.194563, 16.625585),
         datum: new Date(2018, 11, 15),
-        note: "Toto kliste bylo obzvlast neprijemne",
+        note: "Toto kliste bylo obzvlast neprijemne3",
         prenasec: "clovek"
       },
       {
@@ -46,7 +46,7 @@ export default new Vuex.Store({
       {
         coordinates: latLng(49.245678, 16.710495),
         datum: new Date(2019, 7, 13),
-        note: " ",
+        note: "poznamka ",
         prenasec: "pes"
       }
     ],
