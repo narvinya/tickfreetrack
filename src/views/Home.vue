@@ -5,6 +5,7 @@
       <Nadpis />
       <Menu />
       <UvodnyText />
+      <img src="../../public/images/MobilRastlina.png" class="fotkaUvod">
       <HomeButtonBitten />
     </div>
 </body>
@@ -34,4 +35,20 @@ export default {
 
 <style>
 @import url("https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap");
+
+
+@media (min-width:600px) {
+  .fotkaUvod {
+    display:none;
+  }
+}
+
+@media (max-width:599px) {
+.fotkaUvod {
+  max-width:300px;
+  position:absolute;
+  bottom:120px;
+  left:calc(50% - 150px);
+}
+}
 </style>

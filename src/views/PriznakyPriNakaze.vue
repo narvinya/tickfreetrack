@@ -193,4 +193,11 @@ export default {
 .info {
   padding: 30px 15px 5px 15px;
 }
+
+@media (max-width:499px) {
+
+.detailDruhu {
+  display:inline-block;
+}
+}
 </style>

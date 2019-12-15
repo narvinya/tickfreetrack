@@ -40,10 +40,10 @@
         <option value="pes">pes</option>
         <option value="jiny">jiné</option>
       </select>
-    
+    <div>
       <button @click="vymazatFiltr" class="filtrMapa mapaButtonReset" ><i class="fa fa-fw fa-refresh"></i><span class="buttonResetText">VYMAZAŤ FILTER</span></button>
       
-
+</div>
       <l-map :zoom="zoom" :center="center" class="mapa">
         <l-tile-layer :url="url" :attribution="attribution" />
 
@@ -174,7 +174,7 @@ export default {
   margin: 5px;
   position: relative;
   top: 135px;
-  left: 100px;
+  left: 50px;
   z-index: 1000;
   
 }
@@ -194,7 +194,7 @@ export default {
 
   .filtrMapa {
 top:25px;
-left:65px;
+left:40px;
   }
 
 .buttonResetText {

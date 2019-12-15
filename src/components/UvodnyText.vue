@@ -1,6 +1,6 @@
 <template>
   <p class="uvodnyText">
-    Hlavnou myšlienkou tohto webu je sledovanie výskytu kliešťov v prírode. Užívateľ môže zadať lokáciu, kde prišiel do kontaktu s týmto malým nebezpečným parazitom. Vďaka tomu môžete lepšie naplánovať výlet do prírody a prípadnú prevenciu. Čím viac ľudí bude zadávať, kde sa kliešte vyskytujú, tým lepšia bude informovanosť verejnosti. Vopred Vám za všetky príspevky ďakujeme. 
+    Hlavnou myšlienkou tohto webu je sledovanie výskytu kliešťov v prírode. Užívateľ môže zadať lokáciu, kde prišiel do kontaktu s týmto malým a nebezpečným parazitom. Vďaka tomu môžete lepšie naplánovať výlet do prírody a prípadnú prevenciu. Čím viac ľudí bude zadávať lokácie, kde sa kliešte vyskytujú, tým lepšia bude informovanosť verejnosti. Vopred Vám za všetky príspevky ďakujeme. 
   </p>
 </template>
 

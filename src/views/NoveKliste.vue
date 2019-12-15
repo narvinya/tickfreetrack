@@ -245,19 +245,37 @@ export default {
     margin-top: 35px;
   }
   .ramecekMapa {
-    width: 585px;
+    width: 530px;
+  }
+}
+
+@media (max-width: 550px) {
+  .ramecekMapa {
+    width: 480px;
   }
 }
 
 @media (max-width: 500px) {
   .ramecekMapa {
-    width: 400px;
+    width: 430px;
+  }
+}
+
+@media (max-width: 450px) {
+  .ramecekMapa {
+    width: 380px;
   }
 }
 
 @media (max-width: 400px) {
   .ramecekMapa {
-    width: 350px;
+    width: 330px;
+  }
+}
+
+@media (max-width: 350px) {
+  .ramecekMapa {
+    width: 280px;
   }
 }
 </style>
