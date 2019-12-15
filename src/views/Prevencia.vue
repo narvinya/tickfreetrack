@@ -9,42 +9,41 @@
       <p>Ku kontaktu s kliešťom môže dôjsť po celý rok, najaktívnejšie sú však počas teplejších mesiacov (apríl - september).</p>
       <h2>Predtým než pojdete von</h2>
       <p>
-        Je dobré vedieť, kde je možné na kliešte naraziť. Kliešte žijú v trávnatých alebo zalesnených oblastiach.
-        Trávenie času mimo chôdze so psom, kempingom, záhradníctvom alebo poľovačkou by vás mohlo priviesť do tesného kontaktu s kliešťami.
-        Mnoho ľudí dostáva kliešte vo svojom vlastnom dvore alebo okolí.
+        Malé parazity sa vyskytujú v trávnatých porastoch s výškou od dvadsať centimetrov do jedného metra, v záhradách, v parkoch i v lesoch, ale v posledných rokoch v dôsledku klimatických zmien sa dostávajú aj do vyšších zemepisných polôh, až do nadmorskej výšky nad 1000 metrov. Striehnu na koncoch listov, na steblách tráv alebo na vetvičkách prízemných kríkov. Obľubujú najmä dubovo-hrabové lesy.
+        Mnoho ľudí príde do kontaktu s klieštom aj vo svojom vlastnom dvore alebo okolí.
       </p>
       <p>
-        Oblečenie a výstroj ošetrujte výrobkami obsahujúcimi 0,5% permethrinu. Permetrín je možné použiť na ošetrenie obuvi,
-        odevov a kempingového náradia a počas niekoľkých praní zostane chránený.
+        Oblečenie a výstroj ošetrujte výrobkami obsahujúcimi 0,5% permetrínu. Permetrín je možné použiť na ošetrenie obuvi,
+        odevov a kempingového náradia. 
       </p>
       <p>
-        Use Environmental Protection Agency (EPA)-registered insect repellentsexternal icon containing DEET, picaridin, IR3535, Oil of Lemon Eucalyptus (OLE), para-menthane-diol (PMD), or 2-undecanone.
-        Always follow product instructions. Do not use products containing OLE or PMD on children under 3 years old.
-      </p>
-      <p>
-        Avoid Contact with Ticks
-        Avoid wooded and brushy areas with high grass and leaf litter.
-        Walk in the center of trails.
+        Vyhýbajte sa miestam s vyšším predpokladom výskytu kliešťov – okraje lesov, vysoké porasty tráv, krovie.
+        V prírode noste vhodné oblečenie pokrývajúce čo najväčšie časti tela, hlavne dlhé nohavice, ponožky, vhodnejší je svetlý odev, na ktorom parazita skôr zbadáte.
+        
+V lesoch kráčajte predpovšetkým po vyšlapaných chodníkoch.
       </p>
       <h2>Po tom, ako sa vrátite domov</h2>
       <p>
-        Check your clothing for ticks. Ticks may be carried into the house on clothing. Any ticks that are found should be removed. Tumble dry clothes in a dryer on high heat for 10 minutes to kill ticks on dry clothing after you come indoors. If the clothes are damp, additional time may be needed.
-        If the clothes require washing first, hot water is recommended. Cold and medium temperature water will not kill ticks.
-      </p>
-      <p>Examine gear and pets. Ticks can ride into the home on clothing and pets, then attach to a person later, so carefully examine pets, coats, and daypacks</p>
-      <p>
-        Shower soon after being outdoors. Showering within two hours of coming indoors has been shown to reduce your risk of getting Lyme disease and may be effective in reducing the risk of other tickborne diseases.
-        Showering may help wash off unattached ticks and it is a good opportunity to do a tick check.
+       Po návrate domov si dôkladne prekontrolujte celé telo. 
+Všetky nájdené kliešte by sa mali odstrániť. 
+Je možné sušiť oblečenie v sušičke pri vysokej teplote 10 minút, aby ste tým zneškodnili kliešte na oblečení. 
       </p>
       <p>
-        Check your body for ticks after being outdoors. Conduct a full body check upon return from potentially tick-infested areas, including your own backyard. Use a hand-held or full-length mirror to view all parts of your body. Check these parts of your body and your child’s body for ticks:
-        Under the arms
-        In and around the ears
-        Inside belly button
-        Back of the knees
-        In and around the hair
-        Between the legs
-        Around the waist
+Preskúmajte výstroj a domáce zvieratá. Kliešte sa môžu dostať dnu do domu na odevoch a domácich miláčikoch a neskôr sa tak prichytiť na človeka. Starostlivo prezrite domáce zvieratá, oblečenie a batohy.</p>
+      <p>
+
+Osprchujte sa hneď po tom, ako sa vrátite domov. 
+Sprchovanie môže pomôcť zmyť neprichytené kliešte.
+      </p>
+      <p>
+        Kliešť sa najčastejšie prisaje:
+        <ul>
+       <li>do vlasatej časti hlavy</li>
+       <li>do slabín a podpazušia</li>
+<li>za uši</li>
+<li>do podkolennej jamky</li>
+<li>na intímne miesta</li>
+</ul>
       </p>
       <h2>Prírodné pesticídy a repelenty proti kliešťom</h2>
       <p>

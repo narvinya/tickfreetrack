@@ -35,10 +35,10 @@ export default {
 </script>
 
 <style>
-@media (max-width: 600px) {
-  .ikona {
+@media (max-width: 599px) {
+  /* .ikona {
     display: none;
-  }
+  } */
   .nadpisTestovanie {
     font-size: 20px;
   }
@@ -50,7 +50,8 @@ export default {
   font-family: "Roboto Slab", serif;
 }
 .fotoLab {
-  max-width: 100%;
+  max-width: 90%;
+  margin-top:0;
 }
 
 @media (min-width: 600px) {
@@ -59,10 +60,13 @@ export default {
     text-align: left;
     max-width:600px;
   }
-}
 
 .fotoLab {
   max-width: 500px;
   margin-top: 100px;
 }
+
+}
+
+
 </style>

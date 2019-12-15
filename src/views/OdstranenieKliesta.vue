@@ -27,7 +27,7 @@
         Prichyteného kliešťa by sme mali odstrániť kývavým pohybom, pinzetu je potrebné pritlačiť čo najbližšie ku koži.
         Kliešťa uchopíme za tvrdú základňu hlavičky a opatrne ho ťaháme kolmo oproti koži. Súčasne kliešťa pootočíme do polkruhu
         (najviac jednu otáčku) striedavo na obe strany. Ak napriek tomu stále drží, musíme ťah proti koži zväčšovať. Napokon sa uvoľní a podarí sa vybrať ho z rany celého.
-        Po odstránení očistite oblasť antiseptickým prostriedkom, ako je napríklad alkohol alebo mydlo a voda.
+        Po odstránení očistite oblasť antiseptickým prostriedkom, ako je napríklad alkohol alebo mydlo a voda. Ak sa nepodarí odstrániť kliešťa celého, je vhodné vyhľadať zdravotnícku pomoc.
       </p>
     <ButtonDalej link="/novekliste"/>
     </div>

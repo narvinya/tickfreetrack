@@ -5,7 +5,7 @@
     <h1>Príznaky pri nákaze</h1>
     <Menu />
     <div class="kontajner">
-      <h2>Druhy kliešťov</h2>
+      <h2 class="nadpisDruhyKliestov">Druhy kliešťov</h2>
       <div class="obalkaDruhu">
         <br />
         <div @click="nastavAktualniDruh(selected.id)" class="detailDruhu">
@@ -20,7 +20,7 @@
               <span>{{selected.latinskyNazev}}</span>
             </div>
             <div>
-              <span class="label">Nemoci:</span>
+              <span class="label">Ochorenia:</span>
               <span>{{selected.nemoci}}</span>
             </div>
             <div>
@@ -42,6 +42,7 @@
             </div>
           </div>
         </div>
+        <ButtonDalej link="/rizika" />
       </div>
     </div>
   </div>
@@ -52,12 +53,14 @@
 import Ikona from "@/components/Ikona.vue";
 import Menu from "@/components/Menu.vue";
 import Nadpis from "@/components/Nadpis.vue";
+import ButtonDalej from "@/components/ButtonDalej.vue";
 
 export default {
   components: {
     Ikona: Ikona,
     Nadpis: Nadpis,
-    Menu: Menu
+    Menu: Menu,
+    ButtonDalej: ButtonDalej
   },
   data() {
     return {
@@ -68,69 +71,66 @@ export default {
           nazev: "Kliešť americký",
           latinskyNazev: "Amblyomma americanum",
           nemoci:
-            "Ehrlichia chaffeensis, Ehrlichia ewingii - u lidi zpusobuje ehrlichiosis",
+            "Ehrlichia chaffeensis, Ehrlichia ewingii - u ľudí spôsobuje ehrlichiózu",
           obrazek: "https://www.cdc.gov/ticks/images/geo/lone_star_tick.jpg",
           popisek:
-            "Velmi agresivní kliešť, které napadá člověka. Dospělá samice se pozná podle bílé skvrny neboli hvězdy na zádech, jeho sliny mohou být dráždivé, červené zarudnutí a nepříjemné svědění nemusí být příznakem infekce."
+            "Veľmi agresívny kliešť, ktorý napadá človeka. Dospelú samicu je možné spoznať podľa bielej škvrny alebo hviezdy na chrbtovej časti, sliny kliešťa môžu byť dráždivé, červené začervenanie a nepríjemné svrbenie nemusí byť príznakom infekcie."
         },
         {
           id: 2,
           nazev: "Pijak lužný",
           latinskyNazev: "Dermacentor variabilis",
-          nemoci: "Tularemia, Rocky Mountain spotted fever",
+          nemoci: "Tularémia, Rocky Mountain spotted fever",
           obrazek: "https://www.cdc.gov/ticks/images/geo/american_dog_tick.jpg",
           popisek:
-            "Nejvyšší riziko napadení je během jara a léta. Anglicky se mu říká psí klíště. Člověka většinou napadají dospělé samice."
+            "Najvyššie riziko napadnutia je počas jari a leta. Anglicky se mu hovorí psí kliešť. Človeka väčšinou napadajú dospelé samice."
         },
         {
           id: 3,
-          nazev: "Hnědý kliešť psí",
+          nazev: "Hnedý kliešť psí",
           latinskyNazev: "Rhipicephalus sanguineus",
           nemoci: "Rocky Mountain spotted fever",
           obrazek: "https://www.cdc.gov/ticks/images/geo/brown_dog_tick.jpg",
           popisek:
-            "Ve všech fázích vývoje tohoto druhu je primárním přenašečem pes, ale jde i na člověka nebo jiné savce."
+            "Vo všetkých fázach vývoja tohoto druhu je primárnym prenášačom pes, môže však ohrozovať i človeka alebo iného cicavca."
         },
         {
           id: 4,
           nazev: "Pobrežný kliešť",
           latinskyNazev: "Amblyomma maculatum",
-          nemoci: "Rickettsia parkeri rickettsiosis, a form of spotted fever.",
+          nemoci: "Rickettsia parkeri rickettsiosis, spotted fever.",
           obrazek: "https://www.cdc.gov/ticks/images/geo/gulf_coast_tick.jpg",
           popisek:
-            "Larva a nymfa se živí na ptácích a malých hlodavcích, dospělí jedinci na jelenech a divoké zvěři. Dospělá klíšťata se spojují s přenosem  nemoci R. parkeri na člověka."
+            "Larva a nymfa sa živia na vtákoch a malých hlodavcoch, dospelí jedinci na jeleňoch a divokej zveri. Dospelé kliešte sa spájajú s prenosom choroby R. Parker na človeka."
         },
         {
           id: 5,
           nazev: "Kliešť lesný",
           latinskyNazev: "Dermacentor andersoni",
-          nemoci: "Rocky Mountain spotted fever, Colorado tick fever, tularemia.",
+          nemoci: "Rocky Mountain spotted fever, tularémia.",
           obrazek:
             "https://www.cdc.gov/ticks/images/geo/rocky_mountain_wood_tick.jpg",
           popisek:
-            "Dospělí jedinci se živí primárně na velkých savcích. Larvy a nymfy na malých hlodavcích.  Dospělí jedinci jsou primárně spojeni s přenosem patogenů na člověka."
+            "Dospelé jedince sa živia primárne na veľkých cicavcoch. Larvy a nymfy na malých hlodavcoch. Dospelé jedince sú primárne spojené s prenosom patogénov na človeka."
         },
         {
           id: 6,
           nazev: "Kliešť čiernonohý záp.",
           latinskyNazev: "Ixodes pacificus",
-          nemoci:
-            "Anaplasmosis, Lymská borelioza. ",
+          nemoci: "Anaplazmóza, lymská borelióza. ",
           obrazek:
             "https://www.cdc.gov/ticks/images/geo/western_blacklegged_tick.jpg",
           popisek:
-            "Nymfy často parazitují na ještěrkách a jiných malých živočiších, v důsledku čehož je infikovaných poměrně málo (~1%). Pokud se u člověka vyskztnou, pak ve stádiu nymfy nebo dospělé samice."
+            "Nymfy často parazitujú na jaštericiach a iných malých živočíchoch, v dôsledku čoho je infikovaných pomerne málo (~ 1%). Ak sa u človeka vyskytnú, potom v štádiu nymfy alebo dospelej samice."
         },
-         {
+        {
           id: 7,
           nazev: "Kliešť čiernonohý",
           latinskyNazev: "Ixodes scapularis",
-          nemoci:
-            "Borrelia burgdorferi,Lyme disease, anaplasmosis, B. miyamotoi disease, ehrlichiosis, babesiosis, Powassan virus disease ",
-          obrazek:
-            "https://www.cdc.gov/ticks/images/geo/blacklegged_tick.jpg",
+          nemoci: "Lymská borelióza, anaplazmóza, ehrlichióza, babesióza",
+          obrazek: "https://www.cdc.gov/ticks/images/geo/blacklegged_tick.jpg",
           popisek:
-            "Největčí riziko napadení exuistuje během jara, léta a podzimu. Ovšem dospělí jedinci se mohou běžně vyskytovat také v zime, pokud teploty stouplnou nad nulu. Nejčasněji napadají nymfy a dospělé samičky."
+            "Nejväčšie riziko napadnutia exuistuje počas jari, leta a jesene. Avšak dospelí jedinci sa môžu bežne vyskytovať tiež aj v zime, pokiaľ teploty stúpnu nad nulu. Najčastejšie napádajú nymfy a dospelé samičky."
         }
       ]
     };
@@ -152,19 +152,19 @@ export default {
 </script>
 
 <style>
-.label{
+.label {
   color: rgba(63, 179, 157, 1);
   font-weight: bold;
   padding-right: 10px;
 }
-.nadpis {
-  padding: 5px 0 10px 30px;
-  font-size: 20px;
+
+.nadpisDruhyKliestov {
+  text-align: center;
 }
+
 .nadpisDruhu {
   font-size: 20px;
   font-weight: bold;
-  
 }
 .obalkaDruhu {
   display: flex;

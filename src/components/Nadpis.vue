@@ -1,5 +1,5 @@
 <template>
-  <h1>TickFree Track</h1>
+  <h1 class="nadpis">TickFree Track</h1>
 </template>
 
 <script>
@@ -11,8 +11,10 @@ export default {
 <style>
 h1 {
   font-family: 'Roboto Slab', serif;
+  font-size:20px;
   text-align:center;
   padding:25px;
+  
 }
 
 @media (min-width: 600px) {

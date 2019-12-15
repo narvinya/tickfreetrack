@@ -11,11 +11,11 @@ export default {
 <style>
 .ikona {
   position:absolute;
-  max-width: 50px;
+  max-width: 40px;
   display:block;
   float:left;
-  top:12px;
-  right:80%;
+  top:15px;
+  right:82%;
 }
 
 @media (min-width: 600px) {
